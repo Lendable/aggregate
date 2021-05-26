@@ -3,7 +3,7 @@
 set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PROJECT_NAME="lendable_library_template_$(uuidgen | tr "[:upper:]" "[:lower:]" | sed 's/-//g')"
+PROJECT_NAME="lendable_aggregate_$(uuidgen | tr "[:upper:]" "[:lower:]" | sed 's/-//g')"
 
 DOCKER_COMPOSE="docker-compose \
   -f ${DIR}/docker-compose-tests.yaml

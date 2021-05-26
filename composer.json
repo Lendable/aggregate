@@ -1,5 +1,5 @@
 {
-  "name": "lendable/library-template",
+  "name": "lendable/aggregate",
   "description": "Lendable Library Template",
   "type": "library",
   "license": "proprietary",
@@ -13,15 +13,15 @@
   ],
   "autoload": {
     "psr-4": {
-      "Lendable\\LibraryTemplate\\": "src/"
+      "Lendable\\Aggregate\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\Unit\\Lendable\\LibraryTemplate\\": "tests/unit/",
-      "Tests\\Integration\\Lendable\\LibraryTemplate\\": "tests/integration/",
-      "Tests\\Helper\\Lendable\\LibraryTemplate\\": "tests/helper/",
-      "Tests\\Fixture\\Lendable\\LibraryTemplate\\": "tests/fixture/"
+      "Tests\\Unit\\Lendable\\Aggregate\\": "tests/unit/",
+      "Tests\\Integration\\Lendable\\Aggregate\\": "tests/integration/",
+      "Tests\\Helper\\Lendable\\Aggregate\\": "tests/helper/",
+      "Tests\\Fixture\\Lendable\\Aggregate\\": "tests/fixture/"
     }
   },
   "config": {
@@ -30,6 +30,8 @@
   },
   "require": {
     "php": ">=7.4.0",
+    "beberlei/assert": "^3.3",
+    "ramsey/uuid": "^4.1",
     "thecodingmachine/safe": "^1.0"
   },
   "require-dev": {

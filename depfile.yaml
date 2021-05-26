@@ -1,10 +1,10 @@
 paths:
   - ./src
 
-layers: 
-  - name: LibraryTemplate
+layers:
+  - name: Aggregate
     collectors:
       - type: className
-        regex: '^Lendable\\LibraryTemplate\\[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$'
+        regex: '^Lendable\\Aggregate\\[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$'
 
 ruleset: {}
