@@ -1,0 +1,104 @@
+{
+  "name": "lendable/library-template",
+  "description": "Lendable Library Template",
+  "type": "library",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Lendable Ltd",
+      "email": "dev@lendable.co.uk"
+    }
+  ],
+  "repositories": [
+  ],
+  "autoload": {
+    "psr-4": {
+      "Lendable\\LibraryTemplate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Unit\\Lendable\\LibraryTemplate\\": "tests/unit/",
+      "Tests\\Integration\\Lendable\\LibraryTemplate\\": "tests/integration/",
+      "Tests\\Helper\\Lendable\\LibraryTemplate\\": "tests/helper/",
+      "Tests\\Fixture\\Lendable\\LibraryTemplate\\": "tests/fixture/"
+    }
+  },
+  "config": {
+    "bin-dir": "bin",
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=7.4.0",
+    "thecodingmachine/safe": "^1.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "php-parallel-lint/php-parallel-lint": "^1.3",
+    "phpstan/phpstan": "^0.12",
+    "phpstan/phpstan-phpunit": "^0.12",
+    "phpstan/phpstan-strict-rules": "^0.12",
+    "phpunit/phpunit": "^9.5",
+    "qossmic/deptrac-shim": "^0.13.0",
+    "rector/rector": "^0.11.5",
+    "thecodingmachine/phpstan-safe-rule": "^1.0"
+  },
+  "scripts": {
+    "security:check": [
+      "local-php-security-checker"
+    ],
+    "code-style:fix": [
+      "PHP_CS_FIXER_FUTURE_MODE=1 php-cs-fixer fix --diff --ansi --using-cache=no"
+    ],
+    "code-style:check": [
+      "PHP_CS_FIXER_FUTURE_MODE=1 php-cs-fixer fix --dry-run --diff --ansi --using-cache=no"
+    ],
+    "lint:php": [
+      "parallel-lint src",
+      "parallel-lint tests"
+    ],
+    "lint": [
+      "@lint:php"
+    ],
+    "phpstan": [
+      "phpstan analyse -l max src/ tests/ --ansi --no-progress"
+    ],
+    "deptrac": [
+      "bin/deptrac analyze depfile.yaml --ansi --report-uncovered --no-progress"
+    ],
+    "rector:check": [
+      "rector --dry-run --ansi --no-progress-bar"
+    ],
+    "rector:fix": [
+      "rector --ansi --no-progress-bar"
+    ],
+    "static-analysis": [
+      "@composer validate",
+      "@lint",
+      "@phpstan",
+      "@deptrac",
+      "@rector:check"
+    ],
+    "phpunit:unit": [
+      "phpunit --colors --testsuite=unit --do-not-cache-result"
+    ],
+    "phpunit:integration": [
+      "phpunit --colors --testsuite=integration --do-not-cache-result"
+    ],
+    "tests:unit": [
+      "@phpunit:unit"
+    ],
+    "tests:integration": [
+      "@phpunit:integration"
+    ],
+    "ci": [
+      "@static-analysis",
+      "@tests:unit",
+      "@tests:integration",
+      "@code-style:check"
+    ],
+    "run-ci": [
+      "ci/run.sh"
+    ]
+  }
+}

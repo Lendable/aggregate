@@ -1,0 +1,15 @@
+version: '2.4'
+
+services:
+  runner:
+    entrypoint: /bin/sh
+    tty: true
+    build:
+      context: ..
+      dockerfile: Dockerfile.php-cli
+      target: base
+    environment:
+      SSH_AUTH_SOCK: "${SSH_AUTH_SOCK}"
+    volumes:
+      - ".:/app"
+      - "${SSH_AUTH_SOCK}:${SSH_AUTH_SOCK}:ro"

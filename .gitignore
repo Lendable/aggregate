@@ -1,0 +1,13 @@
+# Composer
+/vendor
+composer.lock
+
+# Scripts / executables
+/bin
+!/bin/deptrac
+!/bin/local-php-security-checker
+
+# Dev tooling
+/phpunit.xml
+/.php_cs.cache
+/.deptrac.cache
