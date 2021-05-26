@@ -41,11 +41,34 @@ final class AggregateVersion
 
     public function next(): AggregateVersion
     {
-        return self::fromInteger($this->version + 1);
+        $instance = clone $this;
+        $instance->version++;
+
+        return $instance;
     }
 
     public function equals(self $other): bool
     {
         return $this->version === $other->version;
+    }
+
+    public function before(self $other): bool
+    {
+        return $this->version < $other->version;
+    }
+
+    public function beforeOrEquals(self $other): bool
+    {
+        return $this->version <= $other->version;
+    }
+
+    public function after(self $other): bool
+    {
+        return $this->version > $other->version;
+    }
+
+    public function afterOrEquals(self $other): bool
+    {
+        return $this->version >= $other->version;
     }
 }
