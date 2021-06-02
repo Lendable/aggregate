@@ -1,5 +1,5 @@
 DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-PROJECT_NAME = lendable_library_template
+PROJECT_NAME = lendable_aggregate
 CONTAINER = runner
 PUID ?= 1000
 PGID ?= 1000

@@ -11,7 +11,7 @@ This repository is private, so you will need to add a definition to your
     "repositories": [
         {
             "type": "vcs",
-            "url":  "git@github.com:Lendable/library-template.git"
+            "url":  "git@github.com:Lendable/aggregate.git"
         }
     ]
 }
@@ -20,7 +20,7 @@ This repository is private, so you will need to add a definition to your
 You can then install the library.
 
 ```bash
-composer require lendable/library-template
+composer require lendable/aggregate
 ```
 
 ## Requirements
