@@ -51,7 +51,7 @@ final class AggregateIdTest extends TestCase
         \assert($fields instanceof FieldsInterface);
         $this->assertSame(4, $fields->getVersion());
     }
-  
+
     /**
      * @test
      */
