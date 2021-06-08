@@ -2,7 +2,7 @@ version: '2.4'
 
 services:
   runner:
-    entrypoint: /bin/sh
+    entrypoint: "/bin/sh"
     tty: true
     build:
       context: ..
