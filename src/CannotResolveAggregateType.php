@@ -12,7 +12,7 @@ final class CannotResolveAggregateType extends \RuntimeException
     /**
      * @phpstan-param TAggregateRoot $aggregateRoot
      */
-    public function __construct(object $aggregateRoot, string $cause = '', ?\Throwable $previous = null)
+    private function __construct(object $aggregateRoot, string $cause = '', ?\Throwable $previous = null)
     {
         parent::__construct(
             \Safe\sprintf(
