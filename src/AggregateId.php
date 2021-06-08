@@ -29,6 +29,11 @@ final class AggregateId
         return new self(Uuid::fromBytes($binaryUuid));
     }
 
+    public static function generate(): self
+    {
+        return new self(Uuid::uuid4());
+    }
+
     public function toString(): string
     {
         return $this->uuid->toString();
