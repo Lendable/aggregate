@@ -32,4 +32,21 @@ final class AggregateTypeTest extends TestCase
 
         AggregateType::fromString('');
     }
+
+    /**
+     * @test
+     */
+    public function it_equals_other_aggregate_types_with_an_equal_value(): void
+    {
+        $type = AggregateType::fromString('foo');
+        $typeSameValue = AggregateType::fromString('foo');
+        $otherType = AggregateType::fromString('bar');
+
+        $this->assertTrue($type->equals($type));
+        $this->assertTrue($otherType->equals($otherType));
+        $this->assertTrue($type->equals($typeSameValue));
+        $this->assertTrue($typeSameValue->equals($type));
+        $this->assertFalse($type->equals($otherType));
+        $this->assertFalse($otherType->equals($type));
+    }
 }
