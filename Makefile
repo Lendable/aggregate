@@ -15,7 +15,7 @@ DOCKER_COMPOSE = docker-compose \
 init:
 	@mkdir -p $(HOME)/.composer && chown $(PUID):$(PGID) $(HOME)/.composer
 
-up: init
+up: build
 	$(DOCKER_COMPOSE) up -d
 
 down:
@@ -36,7 +36,7 @@ ps:
 shell:
 	$(DOCKER_COMPOSE) exec -u $(EXEC_USER) $(CONTAINER) $(EXEC_SHELL)
 
-build:
+build: init
 	DOCKER_BUILDKIT=1 docker build --ssh default -f "${DIR}/Dockerfile.php-cli" -t $(PROJECT_NAME)_$(CONTAINER):latest --target base .
 
 clean:
