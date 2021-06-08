@@ -7,7 +7,7 @@ namespace Tests\Unit\Lendable\Aggregate;
 use Lendable\Aggregate\CannotResolveAggregateType;
 
 /**
- * @covers \Lendable\Aggregate
+ * @covers \Lendable\Aggregate\CannotResolveAggregateType
  */
 final class CannotResolveAggregateTypeTest extends ExceptionTest
 {
