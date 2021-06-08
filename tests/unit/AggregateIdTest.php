@@ -51,4 +51,20 @@ final class AggregateIdTest extends TestCase
         \assert($fields instanceof FieldsInterface);
         $this->assertSame(4, $fields->getVersion());
     }
+  
+    /**
+     * @test
+     */
+    public function it_equals_other_aggregate_ids_with_an_equal_value(): void
+    {
+        $id = AggregateId::fromString(self::UUID_V4_STRING);
+        $idSameValue = AggregateId::fromString(self::UUID_V4_STRING);
+        $idDifferentValue = AggregateId::fromString('37d40242-e110-4c9c-a712-15c2a9edbb7a');
+
+        $this->assertTrue($id->equals($id));
+        $this->assertTrue($id->equals($idSameValue));
+        $this->assertTrue($idSameValue->equals($id));
+        $this->assertFalse($id->equals($idDifferentValue));
+        $this->assertFalse($idDifferentValue->equals($id));
+    }
 }
