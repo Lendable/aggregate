@@ -18,7 +18,7 @@ final class CannotResolveAggregateTypeTest extends ExceptionTest
     public function it_constructs_as_expected(string $cause, ?\Throwable $previous): void
     {
         $aggregateRoot = new \stdClass();
-        $fixture = new CannotResolveAggregateType($aggregateRoot, $cause, $previous);
+        $fixture = CannotResolveAggregateType::of($aggregateRoot, $cause, $previous);
 
         $this->assertSame($this->createExpectedExceptionMessage($aggregateRoot, $cause), $fixture->getMessage());
         $this->assertSame(0, $fixture->getCode());
