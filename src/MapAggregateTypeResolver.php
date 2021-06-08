@@ -35,10 +35,7 @@ final class MapAggregateTypeResolver implements AggregateTypeResolver
     public function resolve(object $aggregate): AggregateType
     {
         $aggregateType = $this->map[\get_class($aggregate)] ?? null;
-
-        if (!$aggregateType instanceof AggregateType) {
-            throw CannotResolveAggregateType::of($aggregate, \Safe\sprintf('An aggregate type is not mapped for class "%s".', \get_class($aggregate)));
-        }
+        \assert($aggregateType instanceof AggregateType);
 
         return $aggregateType;
     }
