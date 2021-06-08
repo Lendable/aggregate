@@ -6,6 +6,8 @@ namespace Tests\Unit\Lendable\Aggregate;
 
 use Lendable\Aggregate\AggregateId;
 use PHPUnit\Framework\TestCase;
+use Ramsey\Uuid\Rfc4122\FieldsInterface;
+use Ramsey\Uuid\Uuid;
 use Tests\Helper\Lendable\Aggregate\UuidUtil;
 
 /**
@@ -36,5 +38,17 @@ final class AggregateIdTest extends TestCase
 
         $this->assertSame(self::UUID_V4_STRING, $fixture->toString());
         $this->assertSame($binaryUuid, $fixture->toBinary());
+    }
+
+    /**
+     * @test
+     */
+    public function it_can_be_generated(): void
+    {
+        $instance = AggregateId::generate();
+        $rawUuid = Uuid::fromString($instance->toString());
+        $fields = $rawUuid->getFields();
+        \assert($fields instanceof FieldsInterface);
+        $this->assertSame(4, $fields->getVersion());
     }
 }
