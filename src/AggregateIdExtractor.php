@@ -11,6 +11,8 @@ interface AggregateIdExtractor
 {
     /**
      * @phpstan-param TAggregate $aggregate
+     *
+     * @throws CannotExtractAggregateId
      */
     public function extract(object $aggregate): AggregateId;
 }
