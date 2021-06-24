@@ -41,7 +41,7 @@
     "phpstan/phpstan-phpunit": "^0.12",
     "phpstan/phpstan-strict-rules": "^0.12",
     "phpunit/phpunit": "^9.5",
-    "qossmic/deptrac-shim": "^0.13.0",
+    "qossmic/deptrac-shim": "^0.14",
     "rector/rector": "^0.11.5",
     "thecodingmachine/phpstan-safe-rule": "^1.0"
   },
@@ -66,7 +66,7 @@
       "phpstan analyse -l max src/ tests/ --ansi --no-progress"
     ],
     "deptrac": [
-      "bin/deptrac analyze depfile.yaml --ansi --report-uncovered --no-progress"
+      "bin/deptrac analyze depfile.yaml --ansi --no-progress"
     ],
     "rector:check": [
       "rector --dry-run --ansi --no-progress-bar"
