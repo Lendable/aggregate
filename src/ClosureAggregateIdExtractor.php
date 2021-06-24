@@ -30,7 +30,7 @@ final class ClosureAggregateIdExtractor implements AggregateIdExtractor
     {
         try {
             return ($this->closure)($aggregate);
-        } catch (CannotExtractAggregateId$exception) {
+        } catch (CannotExtractAggregateId $exception) {
             throw $exception;
         } catch (\Exception $exception) {
             throw CannotExtractAggregateId::from($aggregate, 'Uncaught exception in closure, see parent.', $exception);
