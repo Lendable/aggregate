@@ -7,8 +7,7 @@ EXEC_SHELL = /bin/sh
 EXEC_USER = app
 
 DOCKER_COMPOSE = docker-compose \
-  -f ${DIR}/ci/docker-compose-tests.yaml \
-  -f ${DIR}/ci/docker-compose-dev.yaml \
+  -f ${DIR}/local/docker-compose.yaml \
   --project-directory $(DIR) \
   -p ${PROJECT_NAME}
 
@@ -37,7 +36,7 @@ shell:
 	$(DOCKER_COMPOSE) exec -u $(EXEC_USER) $(CONTAINER) $(EXEC_SHELL)
 
 build: init
-	DOCKER_BUILDKIT=1 docker build --ssh default -f "${DIR}/Dockerfile.php-cli" -t $(PROJECT_NAME)_$(CONTAINER):latest --target base .
+	DOCKER_BUILDKIT=1 docker build --ssh default -f "${DIR}/local/Dockerfile.php-cli" -t $(PROJECT_NAME)_$(CONTAINER):latest --target base .
 
 clean:
 	@$(DOCKER_COMPOSE) down -v --rmi local

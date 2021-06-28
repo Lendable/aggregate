@@ -6,14 +6,6 @@ COPY --from=composer:2.1.3 /usr/bin/composer /usr/bin/composer
 RUN apk add --no-cache git openssh \
     && mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-COPY ci/php_conf.ini /usr/local/etc/php/conf.d/999-custom.ini
+COPY local/php_conf.ini /usr/local/etc/php/conf.d/999-custom.ini
 
 WORKDIR /app
-
-FROM base as ci
-
-COPY . /app
-
-RUN --mount=type=ssh composer install --prefer-dist --no-progress -n --ansi \
-    && apk del openssh git \
-    && composer clear-cache --ansi -n

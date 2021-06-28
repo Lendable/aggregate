@@ -98,9 +98,6 @@
       "@tests:unit",
       "@tests:integration",
       "@code-style:check"
-    ],
-    "run-ci": [
-      "ci/run.sh"
     ]
   }
 }
