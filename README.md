@@ -46,17 +46,17 @@ use Lendable\Aggregate\AggregateId;
 
 final class FooIdExtractor extends AggregateIdExtractorSpec 
 {
-    protected function createExtractor() : AggregateIdExtractor
+    protected function createExtractor(): AggregateIdExtractor
     {
         return new FooIdExtractor();
     }
     
-    protected function createExpectedAggregateId() : AggregateId
+    protected function createExpectedAggregateId(): AggregateId
     {
         return AggregateId::fromString('1406fd13-29d3-44e3-812c-c1cd14e12b38');
     }
     
-    protected function createAggregateWithExpectedAggregateId() : object
+    protected function createAggregateWithExpectedAggregateId(): object
     {
         return Foo::register(FooId::fromString('1406fd13-29d3-44e3-812c-c1cd14e12b38'));
     }
