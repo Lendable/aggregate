@@ -1,0 +1,41 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Lendable\Aggregate\Testing;
+
+use Lendable\Aggregate\AggregateVersion;
+use Lendable\Aggregate\AggregateVersionExtractor;
+use PHPUnit\Framework\TestCase;
+use Tests\Unit\Lendable\Aggregate\T;
+
+/**
+ * @phpstan-template T of object
+ */
+abstract class AggregateVersionExtractorSpec extends TestCase
+{
+    /**
+     * @phpstan-return AggregateVersionExtractor<T>
+     */
+    abstract protected function createExtractor(): AggregateVersionExtractor;
+
+    abstract protected function createExpectedAggregateVersion(): AggregateVersion;
+
+    /**
+     * @phpstan-return T
+     */
+    abstract protected function createAggregateWithExpectedAggregateVersion(): object;
+
+    /**
+     * @test
+     */
+    public function it_extracts_an_aggregate_version_from_a_supported_aggregate(): void
+    {
+        $extractor = $this->createExtractor();
+        $aggregate = $this->createAggregateWithExpectedAggregateVersion();
+        $expectedAggregateVersion = $this->createExpectedAggregateVersion();
+        $extractedAggregateVersion = $extractor->extract($aggregate);
+
+        $this->assertTrue($expectedAggregateVersion->equals($extractedAggregateVersion));
+    }
+}

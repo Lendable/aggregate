@@ -7,6 +7,4 @@ parameters:
   level: max
   treatPhpDocTypesAsCertain: false
   ignoreErrors:
-    -
-      message: '#^Dynamic call to static method PHPUnit\\Framework\\(TestCase|Assert)::[a-zA-Z]+\(\)\.$#'
-      path: %currentWorkingDirectory%/tests/*
+    - '#^Dynamic call to static method PHPUnit\\Framework\\(TestCase|Assert)::[a-zA-Z]+\(\)\.$#'

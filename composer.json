@@ -2,7 +2,7 @@
   "name": "lendable/aggregate",
   "description": "Lendable Library Template",
   "type": "library",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Lendable Ltd",
