@@ -19,8 +19,12 @@ final class UserId
 
     public static function fromString(string $uuid): self
     {
-        $parsed = Uuid::fromString($uuid);
-        $fields = $parsed->getFields();
+        return self::fromUuid4(Uuid::fromString($uuid));
+    }
+
+    public static function fromUuid4(UuidInterface $uuid): self
+    {
+        $fields = $uuid->getFields();
 
         if (!$fields instanceof FieldsInterface || $fields->getVersion() !== 4) {
             throw new \InvalidArgumentException(
@@ -28,7 +32,7 @@ final class UserId
             );
         }
 
-        return new self($parsed);
+        return new self($uuid);
     }
 
     public static function generate(): self
