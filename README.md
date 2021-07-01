@@ -1,5 +1,9 @@
 Lendable Aggregate
 ====================
+
+[![Latest Stable Version](https://poser.pugx.org/lendable/aggregate/v/stable)](https://packagist.org/packages/lendable/aggregate)
+[![License](https://poser.pugx.org/lendable/aggregate/license)](https://packagist.org/packages/lendable/aggregate)
+
 Library with supporting functionality to bridge domain and infrastructure interactions for aggregates within event sourcing systems.
 
 This does not help with building out your domain. Rather, it provides interfaces and base functionality for an infrastructure layer to interact with your
