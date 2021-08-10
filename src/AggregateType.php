@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Lendable\Aggregate;
 
+use Assert\Assert;
 use Assert\Assertion;
 use Assert\AssertionFailedException;
 
@@ -12,6 +13,9 @@ use Assert\AssertionFailedException;
  */
 final class AggregateType
 {
+    /**
+     * @var non-empty-string
+     */
     private string $value;
 
     /**
@@ -20,6 +24,7 @@ final class AggregateType
     private function __construct(string $value)
     {
         Assertion::notEmpty($value, 'Aggregate type cannot be empty.');
+        /** @var non-empty-string $value */
 
         $this->value = $value;
     }
@@ -32,6 +37,9 @@ final class AggregateType
         return new self($value);
     }
 
+    /**
+     * @return non-empty-string
+     */
     public function toString(): string
     {
         return $this->value;

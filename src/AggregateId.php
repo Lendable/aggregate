@@ -19,6 +19,9 @@ final class AggregateId
         $this->uuid = $uuid;
     }
 
+    /**
+     * @param non-empty-string $uuid
+     */
     public static function fromString(string $uuid): self
     {
         return new self(Uuid::fromString($uuid));
@@ -34,6 +37,9 @@ final class AggregateId
         return new self(Uuid::uuid4());
     }
 
+    /**
+     * @return non-empty-string
+     */
     public function toString(): string
     {
         return $this->uuid->toString();

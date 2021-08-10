@@ -17,6 +17,9 @@ final class UserId
         $this->uuid = $uuid;
     }
 
+    /**
+     * @param non-empty-string $uuid
+     */
     public static function fromString(string $uuid): self
     {
         return self::fromUuid4(Uuid::fromString($uuid));
@@ -40,6 +43,9 @@ final class UserId
         return new self(Uuid::uuid4());
     }
 
+    /**
+     * @return non-empty-string
+     */
     public function toString(): string
     {
         return $this->uuid->toString();
