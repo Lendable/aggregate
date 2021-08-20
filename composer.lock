@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d61d7e2032840226b7bd861954e682e9",
+    "content-hash": "88a3681e357a936b9b78e9decd3bfbf7",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -2409,23 +2409,23 @@
         },
         {
             "name": "qossmic/deptrac-shim",
-            "version": "0.14.1",
+            "version": "0.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qossmic/deptrac-shim.git",
-                "reference": "e4d67be0fff9cec8dc1943f50e1dbacd08fd5bf1"
+                "reference": "36156075c5e912b4a0c1bbf7a85628897e6165b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qossmic/deptrac-shim/zipball/e4d67be0fff9cec8dc1943f50e1dbacd08fd5bf1",
-                "reference": "e4d67be0fff9cec8dc1943f50e1dbacd08fd5bf1",
+                "url": "https://api.github.com/repos/qossmic/deptrac-shim/zipball/36156075c5e912b4a0c1bbf7a85628897e6165b3",
+                "reference": "36156075c5e912b4a0c1bbf7a85628897e6165b3",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "ext-zlib": "*",
-                "php": "^7.2 || 8.0.*"
+                "php": "^7.4 || 8.0.*"
             },
             "replace": {
                 "qossmic/deptrac": "self.version"
@@ -2451,9 +2451,9 @@
             "description": "deptrac phar distribution",
             "support": {
                 "issues": "https://github.com/qossmic/deptrac-shim/issues",
-                "source": "https://github.com/qossmic/deptrac-shim/tree/0.14.1"
+                "source": "https://github.com/qossmic/deptrac-shim/tree/0.15.0"
             },
-            "time": "2021-07-04T10:19:55+00:00"
+            "time": "2021-08-20T07:43:47+00:00"
         },
         {
             "name": "rector/rector",
