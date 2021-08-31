@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d61d7e2032840226b7bd861954e682e9",
+    "content-hash": "88a3681e357a936b9b78e9decd3bfbf7",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -976,16 +976,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.0.2",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "990b979379502feb7f393d6c9aa36cc9b9765f24"
+                "reference": "cf4cedb9e8991c2daa94a756176d81bf487e4c4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/990b979379502feb7f393d6c9aa36cc9b9765f24",
-                "reference": "990b979379502feb7f393d6c9aa36cc9b9765f24",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/cf4cedb9e8991c2daa94a756176d81bf487e4c4b",
+                "reference": "cf4cedb9e8991c2daa94a756176d81bf487e4c4b",
                 "shasum": ""
             },
             "require": {
@@ -1001,7 +1001,8 @@
                 "symfony/filesystem": "^4.4.20 || ^5.0",
                 "symfony/finder": "^4.4.20 || ^5.0",
                 "symfony/options-resolver": "^4.4.20 || ^5.0",
-                "symfony/polyfill-php72": "^1.22",
+                "symfony/polyfill-php72": "^1.23",
+                "symfony/polyfill-php81": "^1.23",
                 "symfony/process": "^4.4.20 || ^5.0",
                 "symfony/stopwatch": "^4.4.20 || ^5.0"
             },
@@ -1052,7 +1053,7 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues",
-                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v3.0.2"
+                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v3.1.0"
             },
             "funding": [
                 {
@@ -1060,7 +1061,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-04T19:28:19+00:00"
+            "time": "2021-08-29T20:16:20+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1741,21 +1742,21 @@
         },
         {
             "name": "phpstan/phpstan-strict-rules",
-            "version": "0.12.10",
+            "version": "0.12.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-strict-rules.git",
-                "reference": "ce82a050f9da4a32e438272907e38cdd04806223"
+                "reference": "2b72e8e17d2034145f239126e876e5fb659675e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/ce82a050f9da4a32e438272907e38cdd04806223",
-                "reference": "ce82a050f9da4a32e438272907e38cdd04806223",
+                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/2b72e8e17d2034145f239126e876e5fb659675e2",
+                "reference": "2b72e8e17d2034145f239126e876e5fb659675e2",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0",
-                "phpstan/phpstan": "^0.12.66"
+                "phpstan/phpstan": "^0.12.96"
             },
             "require-dev": {
                 "php-parallel-lint/php-parallel-lint": "^1.2",
@@ -1785,9 +1786,9 @@
             "description": "Extra strict and opinionated rules for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-strict-rules/issues",
-                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/0.12.10"
+                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/0.12.11"
             },
-            "time": "2021-07-04T14:57:39+00:00"
+            "time": "2021-08-21T11:36:27+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2409,23 +2410,23 @@
         },
         {
             "name": "qossmic/deptrac-shim",
-            "version": "0.14.1",
+            "version": "0.15.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qossmic/deptrac-shim.git",
-                "reference": "e4d67be0fff9cec8dc1943f50e1dbacd08fd5bf1"
+                "reference": "a624baaea2377712e4681c0d79275ff2e4962490"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qossmic/deptrac-shim/zipball/e4d67be0fff9cec8dc1943f50e1dbacd08fd5bf1",
-                "reference": "e4d67be0fff9cec8dc1943f50e1dbacd08fd5bf1",
+                "url": "https://api.github.com/repos/qossmic/deptrac-shim/zipball/a624baaea2377712e4681c0d79275ff2e4962490",
+                "reference": "a624baaea2377712e4681c0d79275ff2e4962490",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "ext-zlib": "*",
-                "php": "^7.2 || 8.0.*"
+                "php": "^7.4 || 8.0.*"
             },
             "replace": {
                 "qossmic/deptrac": "self.version"
@@ -2451,22 +2452,22 @@
             "description": "deptrac phar distribution",
             "support": {
                 "issues": "https://github.com/qossmic/deptrac-shim/issues",
-                "source": "https://github.com/qossmic/deptrac-shim/tree/0.14.1"
+                "source": "https://github.com/qossmic/deptrac-shim/tree/0.15.2"
             },
-            "time": "2021-07-04T10:19:55+00:00"
+            "time": "2021-08-26T22:22:21+00:00"
         },
         {
             "name": "rector/rector",
-            "version": "0.11.51",
+            "version": "0.11.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "5c16de935192421dc3716002a65ed84666b870a6"
+                "reference": "0a4e8e9f91100c55ae01a6ef706cd8a8f67f17ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/5c16de935192421dc3716002a65ed84666b870a6",
-                "reference": "5c16de935192421dc3716002a65ed84666b870a6",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/0a4e8e9f91100c55ae01a6ef706cd8a8f67f17ae",
+                "reference": "0a4e8e9f91100c55ae01a6ef706cd8a8f67f17ae",
                 "shasum": ""
             },
             "require": {
@@ -2504,7 +2505,7 @@
             "description": "Prefixed and PHP 7.1 downgraded version of rector/rector",
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.11.51"
+                "source": "https://github.com/rectorphp/rector/tree/0.11.52"
             },
             "funding": [
                 {
@@ -2512,7 +2513,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-26T17:03:37+00:00"
+            "time": "2021-08-27T13:02:41+00:00"
         },
         {
             "name": "sebastian/cli-parser",
