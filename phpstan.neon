@@ -2,7 +2,6 @@ includes:
   - phar://vendor/phpstan/phpstan/phpstan.phar/conf/bleedingEdge.neon
   - vendor/phpstan/phpstan-phpunit/extension.neon
   - vendor/phpstan/phpstan-strict-rules/rules.neon
-  - vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
 
 parameters:
   level: max
