@@ -27,7 +27,7 @@ final class CannotExtractAggregateIdTest extends ExceptionTest
 
     private function createExpectedExceptionMessage(object $aggregateRoot, string $cause): string
     {
-        return \Safe\sprintf(
+        return \sprintf(
             'Cannot extract an aggregate id from aggregate root %s<%s>.',
             \get_class($aggregateRoot),
             \spl_object_hash($aggregateRoot)

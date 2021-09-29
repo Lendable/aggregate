@@ -23,7 +23,7 @@ final class ClosureAggregateTypeResolverTest extends AggregateTypeResolverSpec
         return new ClosureAggregateTypeResolver(
             static function (object $user): AggregateType {
                 if (!$user instanceof User) {
-                    throw CannotResolveAggregateType::of($user, \Safe\sprintf('Not an instance of %s.', User::class));
+                    throw CannotResolveAggregateType::of($user, \sprintf('Not an instance of %s.', User::class));
                 }
 
                 return AggregateType::fromString('USER');

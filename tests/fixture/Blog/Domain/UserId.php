@@ -28,7 +28,7 @@ final class UserId
 
         if (!$fields instanceof FieldsInterface || $fields->getVersion() !== 4) {
             throw new \InvalidArgumentException(
-                \Safe\sprintf('UUID must be V4, the provided string %s does not conform.', $uuid)
+                \sprintf('UUID must be V4, the provided string %s does not conform.', $uuid)
             );
         }
 
