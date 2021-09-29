@@ -15,7 +15,7 @@ final class CannotExtractAggregateId extends \RuntimeException
     private function __construct(object $aggregateRoot, string $cause = '', ?\Throwable $previous = null)
     {
         parent::__construct(
-            \Safe\sprintf(
+            \sprintf(
                 'Cannot extract an aggregate id from aggregate root %s<%s>.',
                 \get_class($aggregateRoot),
                 \spl_object_hash($aggregateRoot)

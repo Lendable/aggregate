@@ -1,5 +1,6 @@
 <?php
 
+
 declare(strict_types=1);
 
 namespace Tests\Helper\Lendable\Aggregate;
@@ -14,7 +15,7 @@ trait ValueObjectAssertions
     {
         $this->assertTrue(
             $assertion,
-            \Safe\sprintf('Expected "%s", got "%s".', $expected, $actual)
+            \sprintf('Expected "%s", got "%s".', $expected, $actual)
         );
     }
 

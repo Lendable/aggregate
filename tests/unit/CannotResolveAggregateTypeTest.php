@@ -27,7 +27,7 @@ final class CannotResolveAggregateTypeTest extends ExceptionTest
 
     private function createExpectedExceptionMessage(object $aggregateRoot, string $cause): string
     {
-        return \Safe\sprintf(
+        return \sprintf(
             'Cannot resolve an aggregate type for aggregate root %s<%s>.',
             \get_class($aggregateRoot),
             \spl_object_hash($aggregateRoot)
