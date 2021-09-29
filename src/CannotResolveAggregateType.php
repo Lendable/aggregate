@@ -15,7 +15,7 @@ final class CannotResolveAggregateType extends \RuntimeException
     private function __construct(object $aggregateRoot, string $cause = '', ?\Throwable $previous = null)
     {
         parent::__construct(
-            \Safe\sprintf(
+            \sprintf(
                 'Cannot resolve an aggregate type for aggregate root %s<%s>.',
                 \get_class($aggregateRoot),
                 \spl_object_hash($aggregateRoot)

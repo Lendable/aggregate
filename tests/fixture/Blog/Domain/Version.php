@@ -11,7 +11,7 @@ final class Version
     private function __construct(int $value)
     {
         if ($value < 1) {
-            throw new \InvalidArgumentException(\Safe\sprintf('Value must be > 0, %d given.', $value));
+            throw new \InvalidArgumentException(\sprintf('Value must be > 0, %d given.', $value));
         }
 
         $this->value = $value;
