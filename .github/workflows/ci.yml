@@ -10,6 +10,7 @@ jobs:
   ci:
     name: "Execute"
     runs-on: ${{ matrix.operating-system }}
+    continue-on-error: ${{ matrix.php-version == '8.1' }}
 
     strategy:
       matrix:
@@ -20,6 +21,7 @@ jobs:
         php-version:
           - "7.4"
           - "8.0"
+          - "8.1"
         operating-system:
           - "ubuntu-latest"
 

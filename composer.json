@@ -29,7 +29,7 @@
     "sort-packages": true
   },
   "require": {
-    "php": ">=7.4.0",
+    "php": "^7.4 || ^8.0",
     "beberlei/assert": "^3.3",
     "ramsey/uuid": "^4.1"
   },
