@@ -6,11 +6,8 @@ namespace Tests\Fixture\Lendable\Aggregate\Blog\Domain;
 
 final class Email
 {
-    private string $value;
-
-    public function __construct(string $value)
+    public function __construct(private string $value)
     {
-        $this->value = $value;
     }
 
     public static function fromString(string $value): self

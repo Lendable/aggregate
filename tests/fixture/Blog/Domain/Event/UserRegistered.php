@@ -9,14 +9,8 @@ use Tests\Fixture\Lendable\Aggregate\Blog\Domain\UserId;
 
 final class UserRegistered extends UserEvent
 {
-    private UserId $id;
-
-    private Email $email;
-
-    public function __construct(UserId $id, Email $email)
+    public function __construct(private UserId $id, private Email $email)
     {
-        $this->id = $id;
-        $this->email = $email;
     }
 
     public function id(): UserId

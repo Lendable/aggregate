@@ -11,16 +11,10 @@ namespace Lendable\Aggregate;
 final class ClosureAggregateTypeResolver implements AggregateTypeResolver
 {
     /**
-     * @phpstan-var \Closure(T): AggregateType
-     */
-    private \Closure $closure;
-
-    /**
      * @phpstan-param \Closure(T): AggregateType $closure
      */
-    public function __construct(\Closure $closure)
+    public function __construct(private \Closure $closure)
     {
-        $this->closure = $closure;
     }
 
     /**
