@@ -29,7 +29,7 @@ final class CannotResolveAggregateTypeTest extends ExceptionTest
     {
         return \sprintf(
             'Cannot resolve an aggregate type for aggregate root %s<%s>.',
-            \get_class($aggregateRoot),
+            $aggregateRoot::class,
             \spl_object_hash($aggregateRoot)
         ).($cause === '' ? '' : ' '.$cause);
     }

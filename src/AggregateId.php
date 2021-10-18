@@ -12,11 +12,8 @@ use Ramsey\Uuid\UuidInterface;
  */
 final class AggregateId
 {
-    private UuidInterface $uuid;
-
-    private function __construct(UuidInterface $uuid)
+    private function __construct(private UuidInterface $uuid)
     {
-        $this->uuid = $uuid;
     }
 
     public static function fromString(string $uuid): self

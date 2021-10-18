@@ -11,16 +11,10 @@ namespace Lendable\Aggregate;
 final class ClosureAggregateIdExtractor implements AggregateIdExtractor
 {
     /**
-     * @phpstan-var \Closure(T): AggregateId
-     */
-    private \Closure $closure;
-
-    /**
      * @phpstan-param \Closure(T): AggregateId $closure
      */
-    public function __construct(\Closure $closure)
+    public function __construct(private \Closure $closure)
     {
-        $this->closure = $closure;
     }
 
     /**
