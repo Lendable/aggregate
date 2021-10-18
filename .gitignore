@@ -8,7 +8,6 @@
 
 # Dev tooling
 /phpunit.xml
-/.php_cs.cache
 /.deptrac.cache
 /.phpunit.result.cache
 /.php-cs-fixer.cache
