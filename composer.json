@@ -61,7 +61,7 @@
       "@lint:php"
     ],
     "phpstan": [
-      "phpstan analyse -l max src/ tests/ --ansi --no-progress"
+      "phpstan analyse --memory-limit=-1 src/ tests/ --ansi --no-progress"
     ],
     "deptrac": [
       "bin/deptrac analyze depfile.yaml --ansi --no-progress"
