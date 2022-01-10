@@ -31,6 +31,7 @@
   "require": {
     "php": ">=8.0.0",
     "beberlei/assert": "^3.3",
+    "ramsey/collection": "^1.2",
     "ramsey/uuid": "^4.1"
   },
   "require-dev": {
