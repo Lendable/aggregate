@@ -19,6 +19,7 @@ jobs:
           - "locked"
         php-version:
           - "8.0"
+          - "8.1"
         operating-system:
           - "ubuntu-latest"
 
@@ -61,6 +62,7 @@ jobs:
         run: "composer lint"
 
       - name: "Run coding style"
+        if: ${{ matrix.php-version != '8.1' }} # php-cs-fixer does not run on 8.1 yet
         run: "composer code-style:check"
 
       - name: "Run PHPStan"
