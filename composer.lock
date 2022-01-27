@@ -2428,16 +2428,16 @@
         },
         {
             "name": "qossmic/deptrac-shim",
-            "version": "0.19.2",
+            "version": "0.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qossmic/deptrac-shim.git",
-                "reference": "5ffada09383cc8e2f73db213db9a11946530ca88"
+                "reference": "c261124d55dfcb886075a50d5b3e79830864857d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qossmic/deptrac-shim/zipball/5ffada09383cc8e2f73db213db9a11946530ca88",
-                "reference": "5ffada09383cc8e2f73db213db9a11946530ca88",
+                "url": "https://api.github.com/repos/qossmic/deptrac-shim/zipball/c261124d55dfcb886075a50d5b3e79830864857d",
+                "reference": "c261124d55dfcb886075a50d5b3e79830864857d",
                 "shasum": ""
             },
             "require": {
@@ -2475,9 +2475,9 @@
             "description": "deptrac phar distribution",
             "support": {
                 "issues": "https://github.com/qossmic/deptrac-shim/issues",
-                "source": "https://github.com/qossmic/deptrac-shim/tree/0.19.2"
+                "source": "https://github.com/qossmic/deptrac-shim/tree/0.19.3"
             },
-            "time": "2022-01-23T21:14:18+00:00"
+            "time": "2022-01-27T06:36:18+00:00"
         },
         {
             "name": "rector/rector",
