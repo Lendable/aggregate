@@ -16,8 +16,15 @@
     },
     {
       "matchPaths": ["+(composer.json)"],
+      "matchDepTypes": ["require"],
       "enabled": true,
       "groupName": "composer"
+    },
+    {
+      "matchPaths": ["+(composer.json)"],
+      "matchDepTypes": ["require-dev"],
+      "enabled": true,
+      "groupName": "composer-dev"
     },
     {
       "matchPaths": [".github/**"],
