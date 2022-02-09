@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "rangeStrategy": "update-lockfile",
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["docker"],
+      "enabled": true,
+      "groupName": "docker"
+    },
+    {
+      "matchPaths": ["+(composer.json)"],
+      "matchDepTypes": ["require"],
+      "enabled": true,
+      "groupName": "composer"
+    },
+    {
+      "matchPaths": ["+(composer.json)"],
+      "matchDepTypes": ["require-dev"],
+      "enabled": true,
+      "groupName": "composer-dev"
+    },
+    {
+      "matchPaths": [".github/**"],
+      "enabled": true,
+      "groupName": "github-actions"
+    }
+  ]
+}
