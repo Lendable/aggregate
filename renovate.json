@@ -12,7 +12,10 @@
     {
       "matchDatasources": ["docker"],
       "enabled": true,
-      "groupName": "docker"
+      "groupName": "docker",
+      "platformAutomerge": true,
+      "automergeType": "pr",
+      "enabled": true,
     },
     {
       "matchPaths": ["+(composer.json)"],
