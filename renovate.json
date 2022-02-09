@@ -17,12 +17,18 @@
     {
       "matchPaths": ["+(composer.json)"],
       "matchDepTypes": ["require"],
+      "automerge": true,
+      "platformAutomerge": true,
+      "automergeType": "pr",
       "enabled": true,
       "groupName": "composer"
     },
     {
       "matchPaths": ["+(composer.json)"],
       "matchDepTypes": ["require-dev"],
+      "automerge": true,
+      "platformAutomerge": true,
+      "automergeType": "pr",
       "enabled": true,
       "groupName": "composer-dev"
     },
