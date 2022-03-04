@@ -1640,16 +1640,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.4.7",
+            "version": "1.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "15087679960d72ae56bfcbf0d728d19941d3f7c2"
+                "reference": "2a6d6704b17c4db6190cc3104056c0aad740cb15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/15087679960d72ae56bfcbf0d728d19941d3f7c2",
-                "reference": "15087679960d72ae56bfcbf0d728d19941d3f7c2",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2a6d6704b17c4db6190cc3104056c0aad740cb15",
+                "reference": "2a6d6704b17c4db6190cc3104056c0aad740cb15",
                 "shasum": ""
             },
             "require": {
@@ -1680,7 +1680,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.4.7"
+                "source": "https://github.com/phpstan/phpstan/tree/1.4.8"
             },
             "funding": [
                 {
@@ -1700,7 +1700,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-02T16:04:01+00:00"
+            "time": "2022-03-04T13:03:56+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -2481,21 +2481,21 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.12.16",
+            "version": "0.12.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "13412efd0dfda2e2c310dd24397281804441cf7a"
+                "reference": "4f32575b718a4d7032423dc8e9d1e530ad859782"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/13412efd0dfda2e2c310dd24397281804441cf7a",
-                "reference": "13412efd0dfda2e2c310dd24397281804441cf7a",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/4f32575b718a4d7032423dc8e9d1e530ad859782",
+                "reference": "4f32575b718a4d7032423dc8e9d1e530ad859782",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1|^8.0",
-                "phpstan/phpstan": "^1.4.2"
+                "phpstan/phpstan": "^1.4.6"
             },
             "conflict": {
                 "phpstan/phpdoc-parser": "<1.2",
@@ -2529,7 +2529,7 @@
             "description": "Instant Upgrade and Automated Refactoring of any PHP code",
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.12.16"
+                "source": "https://github.com/rectorphp/rector/tree/0.12.17"
             },
             "funding": [
                 {
@@ -2537,7 +2537,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-09T14:50:55+00:00"
+            "time": "2022-03-03T12:18:11+00:00"
         },
         {
             "name": "sebastian/cli-parser",
