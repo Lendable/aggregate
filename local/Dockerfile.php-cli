@@ -9,3 +9,13 @@ RUN apk add --no-cache git openssh \
 COPY local/php_conf.ini /usr/local/etc/php/conf.d/999-custom.ini
 
 WORKDIR /app
+
+FROM base AS dev
+
+ARG XDEBUG_VERSION="3.0.4"
+RUN apk add --no-cache autoconf file g++ gcc libc-dev make pkgconf re2c \
+  && apk add --no-cache bash nodejs nodejs-npm git \
+  && pecl install "xdebug-${XDEBUG_VERSION}" \
+  && apk del autoconf file g++ gcc libc-dev make pkgconf re2c
+
+COPY local/xdebug-entrypoint.sh /usr/local/bin/docker-php-xdebug-entrypoint
