@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.0.0-experimental
-FROM lendableuk/php-fpm-alpine:7.4.9-alpine3.11 as base
+FROM lendableuk/php-fpm-alpine:8.0.11-alpine3.13 as base
 
-COPY --from=composer:2.2.6 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.2.10 /usr/bin/composer /usr/bin/composer
 
 RUN apk add --no-cache git openssh \
     && mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
@@ -9,3 +9,13 @@ RUN apk add --no-cache git openssh \
 COPY local/php_conf.ini /usr/local/etc/php/conf.d/999-custom.ini
 
 WORKDIR /app
+
+FROM base AS dev
+
+ARG XDEBUG_VERSION="3.0.4"
+RUN apk add --no-cache autoconf file g++ gcc libc-dev make pkgconf re2c \
+  && apk add --no-cache bash nodejs nodejs-npm git \
+  && pecl install "xdebug-${XDEBUG_VERSION}" \
+  && apk del autoconf file g++ gcc libc-dev make pkgconf re2c
+
+COPY local/xdebug-entrypoint.sh /usr/local/bin/docker-php-xdebug-entrypoint
