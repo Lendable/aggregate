@@ -64,7 +64,7 @@
       "phpstan analyse --memory-limit=-1 src/ tests/ --ansi --no-progress"
     ],
     "deptrac": [
-      "bin/deptrac analyze deptrac.yaml --ansi --no-progress"
+      "bin/deptrac analyze --ansi --no-progress"
     ],
     "rector:check": [
       "rector --dry-run --ansi --no-progress-bar"
