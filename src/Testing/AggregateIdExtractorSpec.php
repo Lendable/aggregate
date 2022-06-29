@@ -7,13 +7,14 @@ namespace Lendable\Aggregate\Testing;
 use Lendable\Aggregate\AggregateId;
 use Lendable\Aggregate\AggregateIdExtractor;
 use PHPUnit\Framework\TestCase;
-use Tests\Unit\Lendable\Aggregate\T;
 
 /**
  * @phpstan-template T of object
  */
 abstract class AggregateIdExtractorSpec extends TestCase
 {
+    use ValueObjectAssertions;
+
     protected const DEFAULT_V4_UUID = 'b96e8609-e6ef-4d62-a29e-45012fdd6d5a';
 
     /**
@@ -38,6 +39,6 @@ abstract class AggregateIdExtractorSpec extends TestCase
         $expectedAggregateId = $this->createExpectedAggregateId();
         $extractedAggregateId = $extractor->extract($aggregate);
 
-        $this->assertTrue($expectedAggregateId->equals($extractedAggregateId));
+        $this->assertAggregateIdEquals($expectedAggregateId, $extractedAggregateId);
     }
 }
