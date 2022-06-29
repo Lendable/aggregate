@@ -7,13 +7,14 @@ namespace Lendable\Aggregate\Testing;
 use Lendable\Aggregate\AggregateType;
 use Lendable\Aggregate\AggregateTypeResolver;
 use PHPUnit\Framework\TestCase;
-use Tests\Unit\Lendable\Aggregate\T;
 
 /**
  * @phpstan-template T of object
  */
 abstract class AggregateTypeResolverSpec extends TestCase
 {
+    use ValueObjectAssertions;
+
     /**
      * @phpstan-return AggregateTypeResolver<T>
      */
@@ -36,6 +37,6 @@ abstract class AggregateTypeResolverSpec extends TestCase
         $expectedAggregateType = $this->createExpectedAggregateType();
         $resolvedAggregateType = $resolver->resolve($aggregate);
 
-        $this->assertTrue($expectedAggregateType->equals($resolvedAggregateType));
+        $this->assertAggregateTypeEquals($expectedAggregateType, $resolvedAggregateType);
     }
 }

@@ -7,13 +7,14 @@ namespace Lendable\Aggregate\Testing;
 use Lendable\Aggregate\AggregateVersion;
 use Lendable\Aggregate\AggregateVersionExtractor;
 use PHPUnit\Framework\TestCase;
-use Tests\Unit\Lendable\Aggregate\T;
 
 /**
  * @phpstan-template T of object
  */
 abstract class AggregateVersionExtractorSpec extends TestCase
 {
+    use ValueObjectAssertions;
+
     /**
      * @phpstan-return AggregateVersionExtractor<T>
      */
@@ -36,6 +37,6 @@ abstract class AggregateVersionExtractorSpec extends TestCase
         $expectedAggregateVersion = $this->createExpectedAggregateVersion();
         $extractedAggregateVersion = $extractor->extract($aggregate);
 
-        $this->assertTrue($expectedAggregateVersion->equals($extractedAggregateVersion));
+        $this->assertAggregateVersionEquals($expectedAggregateVersion, $extractedAggregateVersion);
     }
 }

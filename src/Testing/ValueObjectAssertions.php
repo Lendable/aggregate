@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Helper\Lendable\Aggregate;
+namespace Lendable\Aggregate\Testing;
 
 use Lendable\Aggregate\AggregateId;
 use Lendable\Aggregate\AggregateType;
