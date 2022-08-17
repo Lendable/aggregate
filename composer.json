@@ -95,6 +95,7 @@
       "@phpunit:integration"
     ],
     "ci": [
+      "composer audit",
       "@static-analysis",
       "@tests:unit",
       "@tests:integration",
