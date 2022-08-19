@@ -49,7 +49,9 @@ final class AggregateVersionTest extends TestCase
      */
     public function it_can_provide_the_next_aggregate_version_that_follows_it(): void
     {
-        $this->assertSame(2, AggregateVersion::fromInteger(1)->next()->toInteger());
+        $v1 = AggregateVersion::fromInteger(1);
+        $this->assertSame(2, $v1->next()->toInteger());
+        $this->assertSame(1, $v1->toInteger());
     }
 
     /**
