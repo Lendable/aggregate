@@ -46,11 +46,12 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
         $aggregate = new class () {
         };
         $exception = CannotExtractAggregateId::from($aggregate);
-        $this->expectExceptionObject($exception);
 
         $extractor = new ClosureAggregateIdExtractor(static function (object $aggregate) use ($exception): AggregateId {
             throw $exception;
         });
+
+        $this->expectExceptionObject($exception);
 
         $extractor->extract($aggregate);
     }
