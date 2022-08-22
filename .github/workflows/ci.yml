@@ -45,10 +45,11 @@ jobs:
       - name: "Run linting"
         run: "composer lint"
 
-      - name: "Run Composer audit"
-        run: "composer audit"
+      - name: "Run security check"
+        run: "composer security:check"
 
       - name: "Run coding style"
+        if: ${{ matrix.dependencies == 'locked' }}
         run: "composer code-style:check"
 
       - name: "Run PHPStan"
