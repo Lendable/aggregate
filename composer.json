@@ -44,7 +44,7 @@
     "phpstan/phpstan-strict-rules": "^1.0",
     "phpunit/phpunit": "^9.5",
     "qossmic/deptrac-shim": "^0.23",
-    "rector/rector": "^0.13"
+    "rector/rector": "^0.15.1"
   },
   "scripts": {
     "security:check": [
@@ -64,7 +64,7 @@
       "@lint:php"
     ],
     "phpstan": [
-      "phpstan analyse --memory-limit=-1 src/ tests/ --ansi --no-progress"
+      "phpstan analyse --memory-limit=-1 src/ tests/ rector.php --ansi --no-progress"
     ],
     "deptrac": [
       "bin/deptrac analyze --ansi --no-progress"
