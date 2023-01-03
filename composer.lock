@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a72767fd47b299b4aa61d904f82f9e38",
+    "content-hash": "a392ae975630ecb6e4a123a29f01e4bc",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -690,16 +690,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.13.1",
+            "version": "v3.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "189308bc3dad74772b6e13a3a02b4a760999f724"
+                "reference": "086298cee7ff11c13abb68c64da2d657f9de3da0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/189308bc3dad74772b6e13a3a02b4a760999f724",
-                "reference": "189308bc3dad74772b6e13a3a02b4a760999f724",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/086298cee7ff11c13abb68c64da2d657f9de3da0",
+                "reference": "086298cee7ff11c13abb68c64da2d657f9de3da0",
                 "shasum": ""
             },
             "require": {
@@ -735,9 +735,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.13.1"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.13.2"
             },
-            "time": "2022-12-18T00:48:28+00:00"
+            "time": "2023-01-03T00:00:24+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
@@ -798,16 +798,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.9.4",
+            "version": "1.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "d03bccee595e2146b7c9d174486b84f4dc61b0f2"
+                "reference": "4d18c5d98965029c2aa1ccbd91dc22e7ba8c5034"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d03bccee595e2146b7c9d174486b84f4dc61b0f2",
-                "reference": "d03bccee595e2146b7c9d174486b84f4dc61b0f2",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/4d18c5d98965029c2aa1ccbd91dc22e7ba8c5034",
+                "reference": "4d18c5d98965029c2aa1ccbd91dc22e7ba8c5034",
                 "shasum": ""
             },
             "require": {
@@ -837,7 +837,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.9.4"
+                "source": "https://github.com/phpstan/phpstan/tree/1.9.5"
             },
             "funding": [
                 {
@@ -853,7 +853,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-17T13:33:52+00:00"
+            "time": "2023-01-02T21:35:42+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
