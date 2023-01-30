@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "367b0dca0c91dbff484935c9de1bc02d",
+    "content-hash": "a25d7659427bce05d511291f4109eb3c",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -690,16 +690,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.13.2",
+            "version": "v3.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "086298cee7ff11c13abb68c64da2d657f9de3da0"
+                "reference": "0d55a9c0012c4422c1a517e143ea7813f2edc9ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/086298cee7ff11c13abb68c64da2d657f9de3da0",
-                "reference": "086298cee7ff11c13abb68c64da2d657f9de3da0",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/0d55a9c0012c4422c1a517e143ea7813f2edc9ac",
+                "reference": "0d55a9c0012c4422c1a517e143ea7813f2edc9ac",
                 "shasum": ""
             },
             "require": {
@@ -715,7 +715,8 @@
                 "ext-mbstring": "For handling non-UTF8 characters."
             },
             "bin": [
-                "php-cs-fixer"
+                "php-cs-fixer",
+                "php-cs-fixer.phar"
             ],
             "type": "application",
             "notification-url": "https://packagist.org/downloads/",
@@ -735,9 +736,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.13.2"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.14.2"
             },
-            "time": "2023-01-03T00:00:24+00:00"
+            "time": "2023-01-29T23:48:17+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
