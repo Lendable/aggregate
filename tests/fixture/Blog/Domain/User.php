@@ -9,7 +9,7 @@ use Tests\Fixture\Lendable\Aggregate\Blog\Domain\Event\UserRegistered;
 
 final class User
 {
-    private UserState $state;
+    private readonly UserState $state;
 
     private ?Version $version = null;
 

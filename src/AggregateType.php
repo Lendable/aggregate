@@ -12,16 +12,12 @@ use Assert\AssertionFailedException;
  */
 final class AggregateType
 {
-    private string $value;
-
     /**
      * @throws AssertionFailedException If $value is empty.
      */
-    private function __construct(string $value)
+    private function __construct(private readonly string $value)
     {
         Assertion::notEmpty($value, 'Aggregate type cannot be empty.');
-
-        $this->value = $value;
     }
 
     /**

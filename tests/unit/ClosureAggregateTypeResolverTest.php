@@ -47,7 +47,7 @@ final class ClosureAggregateTypeResolverTest extends AggregateTypeResolverSpec
     public function it_converts_exceptions_that_dont_conform_to_the_contract_thrown_from_the_closure(): void
     {
         $resolver = new ClosureAggregateTypeResolver(
-            static function (object $aggregate): AggregateType {
+            static function (object $aggregate): never {
                 throw new \RuntimeException('Foo Bar');
             }
         );
@@ -68,7 +68,7 @@ final class ClosureAggregateTypeResolverTest extends AggregateTypeResolverSpec
     public function it_passes_through_exceptions_that_conform_to_the_contract_thrown_from_the_closure(): void
     {
         $resolver = new ClosureAggregateTypeResolver(
-            static function (object $aggregate): AggregateType {
+            static function (object $aggregate): never {
                 throw CannotResolveAggregateType::of($aggregate);
             }
         );
