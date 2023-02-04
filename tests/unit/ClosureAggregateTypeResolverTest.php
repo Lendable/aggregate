@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use PHPUnit\Framework\Attributes\Test;
 use Lendable\Aggregate\AggregateType;
 use Lendable\Aggregate\AggregateTypeResolver;
 use Lendable\Aggregate\CannotResolveAggregateType;
@@ -41,9 +42,7 @@ final class ClosureAggregateTypeResolverTest extends AggregateTypeResolverSpec
         return User::register(UserId::generate(), Email::fromString('foo@example.com'));
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_converts_exceptions_that_dont_conform_to_the_contract_thrown_from_the_closure(): void
     {
         $resolver = new ClosureAggregateTypeResolver(
@@ -62,9 +61,7 @@ final class ClosureAggregateTypeResolverTest extends AggregateTypeResolverSpec
         }
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_passes_through_exceptions_that_conform_to_the_contract_thrown_from_the_closure(): void
     {
         $resolver = new ClosureAggregateTypeResolver(

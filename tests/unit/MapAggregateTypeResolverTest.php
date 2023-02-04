@@ -4,19 +4,17 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Lendable\Aggregate\AggregateType;
 use Lendable\Aggregate\CannotResolveAggregateType;
 use Lendable\Aggregate\MapAggregateTypeResolver;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \Lendable\Aggregate\MapAggregateTypeResolver
- */
+#[CoversClass(MapAggregateTypeResolver::class)]
 final class MapAggregateTypeResolverTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function it_can_resolve_an_aggregate_type_for_a_mapped_aggregate_root(): void
     {
         $fixture = new MapAggregateTypeResolver([\stdClass::class => AggregateType::fromString('foo')]);
@@ -24,9 +22,7 @@ final class MapAggregateTypeResolverTest extends TestCase
         $this->assertSame('foo', $fixture->resolve(new \stdClass())->toString());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_throws_if_a_mapped_class_does_not_exist(): void
     {
         $this->expectException(\InvalidArgumentException::class);
@@ -36,9 +32,7 @@ final class MapAggregateTypeResolverTest extends TestCase
         new MapAggregateTypeResolver([\FooBarBaz::class => AggregateType::fromString('FooBarBaz')]);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_throws_if_a_mapped_value_is_not_an_aggregate_type(): void
     {
         $badValue = new class () {
@@ -51,9 +45,7 @@ final class MapAggregateTypeResolverTest extends TestCase
         new MapAggregateTypeResolver([\stdClass::class => $badValue]);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_throws_if_cannot_resolve_an_aggregate_as_not_mapped(): void
     {
         $this->expectException(CannotResolveAggregateType::class);

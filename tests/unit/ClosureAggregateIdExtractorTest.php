@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use PHPUnit\Framework\Attributes\Test;
 use Lendable\Aggregate\AggregateId;
 use Lendable\Aggregate\AggregateIdExtractor;
 use Lendable\Aggregate\CannotExtractAggregateId;
@@ -38,9 +39,7 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
         );
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_rethrows_any_interface_compliant_exception_from_the_closure(): void
     {
         $aggregate = new class () {
@@ -56,9 +55,7 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
         $extractor->extract($aggregate);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_wraps_and_throws_for_any_non_interface_compliant_exception_from_the_closure(): void
     {
         $aggregate = new class () {

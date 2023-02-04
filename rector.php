@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
 use Rector\Core\ValueObject\PhpVersion;
+use Rector\PHPUnit\Set\PHPUnitLevelSetList;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 
@@ -15,9 +16,12 @@ return static function (RectorConfig $rectorConfig): void {
     ]);
     $rectorConfig->phpVersion(PhpVersion::PHP_81);
     $rectorConfig->phpstanConfig(__DIR__.'/phpstan-rector.neon');
+    $rectorConfig->importNames();
+    $rectorConfig->importShortClasses(false);
 
     $rectorConfig->sets([
         SetList::CODE_QUALITY,
         LevelSetList::UP_TO_PHP_81,
+        PHPUnitLevelSetList::UP_TO_PHPUNIT_90,
     ]);
 };

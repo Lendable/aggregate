@@ -4,22 +4,20 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Lendable\Aggregate\AggregateId;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Rfc4122\FieldsInterface;
 use Ramsey\Uuid\Uuid;
 use Tests\Helper\Lendable\Aggregate\UuidUtil;
 
-/**
- * @covers \Lendable\Aggregate\AggregateId
- */
+#[CoversClass(AggregateId::class)]
 final class AggregateIdTest extends TestCase
 {
     private const UUID_V4_STRING = '73d47cc6-e0c1-433b-9a6a-b68ed94f8ca6';
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_can_be_constructed_statically_from_a_uuid_string(): void
     {
         $fixture = AggregateId::fromString(self::UUID_V4_STRING);
@@ -28,9 +26,7 @@ final class AggregateIdTest extends TestCase
         $this->assertSame(UuidUtil::stringToBinaryString(self::UUID_V4_STRING), $fixture->toBinary());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_can_be_constructed_from_binary_via_static_factory(): void
     {
         $binaryUuid = UuidUtil::stringToBinaryString(self::UUID_V4_STRING);
@@ -40,9 +36,7 @@ final class AggregateIdTest extends TestCase
         $this->assertSame($binaryUuid, $fixture->toBinary());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_can_be_generated(): void
     {
         $instance = AggregateId::generate();
@@ -52,9 +46,7 @@ final class AggregateIdTest extends TestCase
         $this->assertSame(4, $fields->getVersion());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_equals_other_aggregate_ids_with_an_equal_value(): void
     {
         $id = AggregateId::fromString(self::UUID_V4_STRING);

@@ -4,17 +4,16 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
 use Lendable\Aggregate\CannotExtractAggregateId;
 
-/**
- * @covers \Lendable\Aggregate\CannotExtractAggregateId
- */
-final class CannotExtractAggregateIdTest extends ExceptionTest
+#[CoversClass(CannotExtractAggregateId::class)]
+final class CannotExtractAggregateIdTest extends ExceptionTestCase
 {
-    /**
-     * @test
-     * @dataProvider providePossibleCausesAndPreviousExceptions
-     */
+    #[DataProvider('providePossibleCausesAndPreviousExceptions')]
+    #[Test]
     public function it_constructs_as_expected(string $cause, ?\Throwable $previous): void
     {
         $aggregateRoot = new \stdClass();
