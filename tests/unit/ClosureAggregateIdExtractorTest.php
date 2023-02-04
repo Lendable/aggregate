@@ -47,7 +47,7 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
         };
         $exception = CannotExtractAggregateId::from($aggregate);
 
-        $extractor = new ClosureAggregateIdExtractor(static function (object $aggregate) use ($exception): AggregateId {
+        $extractor = new ClosureAggregateIdExtractor(static function (object $aggregate) use ($exception): never {
             throw $exception;
         });
 
@@ -65,7 +65,7 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
         };
         $exception = new \Exception();
 
-        $extractor = new ClosureAggregateIdExtractor(static function (object $aggregate) use ($exception): AggregateId {
+        $extractor = new ClosureAggregateIdExtractor(static function (object $aggregate) use ($exception): never {
             throw $exception;
         });
         $wasAnExceptionThrown = false;

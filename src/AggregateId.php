@@ -12,7 +12,7 @@ use Ramsey\Uuid\UuidInterface;
  */
 final class AggregateId
 {
-    private function __construct(private UuidInterface $uuid)
+    private function __construct(private readonly UuidInterface $uuid)
     {
     }
 

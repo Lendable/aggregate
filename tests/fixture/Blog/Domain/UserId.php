@@ -10,7 +10,7 @@ use Ramsey\Uuid\UuidInterface;
 
 final class UserId
 {
-    private function __construct(private UuidInterface $uuid)
+    private function __construct(private readonly UuidInterface $uuid)
     {
     }
 

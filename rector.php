@@ -13,11 +13,11 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__.'/src',
         __DIR__.'/tests',
     ]);
-    $rectorConfig->phpVersion(PhpVersion::PHP_80);
+    $rectorConfig->phpVersion(PhpVersion::PHP_81);
     $rectorConfig->phpstanConfig(__DIR__.'/phpstan-rector.neon');
 
     $rectorConfig->sets([
         SetList::CODE_QUALITY,
-        LevelSetList::UP_TO_PHP_80,
+        LevelSetList::UP_TO_PHP_81,
     ]);
 };

@@ -13,7 +13,7 @@ final class ClosureAggregateTypeResolver implements AggregateTypeResolver
     /**
      * @phpstan-param \Closure(T): AggregateType $closure
      */
-    public function __construct(private \Closure $closure)
+    public function __construct(private readonly \Closure $closure)
     {
     }
 

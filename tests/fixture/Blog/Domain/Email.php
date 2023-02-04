@@ -6,7 +6,7 @@ namespace Tests\Fixture\Lendable\Aggregate\Blog\Domain;
 
 final class Email
 {
-    public function __construct(private string $value)
+    public function __construct(private readonly string $value)
     {
     }
 
