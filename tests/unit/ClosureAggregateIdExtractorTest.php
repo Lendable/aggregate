@@ -40,7 +40,7 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
     }
 
     #[Test]
-    public function it_rethrows_any_interface_compliant_exception_from_the_closure(): void
+    public function rethrows_any_interface_compliant_exception_from_the_closure(): void
     {
         $aggregate = new class () {
         };
@@ -56,7 +56,7 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
     }
 
     #[Test]
-    public function it_wraps_and_throws_for_any_non_interface_compliant_exception_from_the_closure(): void
+    public function wraps_and_throws_for_any_non_interface_compliant_exception_from_the_closure(): void
     {
         $aggregate = new class () {
         };

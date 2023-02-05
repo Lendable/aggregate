@@ -32,7 +32,7 @@ abstract class AggregateIdExtractorSpec extends TestCase
     /**
      * @test
      */
-    public function it_extracts_an_aggregate_id_from_a_supported_aggregate(): void
+    final public function extracts_an_aggregate_id_from_a_supported_aggregate(): void
     {
         $extractor = $this->createExtractor();
         $aggregate = $this->createAggregateWithExpectedAggregateId();

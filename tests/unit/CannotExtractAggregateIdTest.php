@@ -14,7 +14,7 @@ final class CannotExtractAggregateIdTest extends ExceptionTestCase
 {
     #[DataProvider('providePossibleCausesAndPreviousExceptions')]
     #[Test]
-    public function it_constructs_as_expected(string $cause, ?\Throwable $previous): void
+    public function constructs_with_a_formatted_message_from_input(string $cause, ?\Throwable $previous): void
     {
         $aggregateRoot = new \stdClass();
         $fixture = CannotExtractAggregateId::from($aggregateRoot, $cause, $previous);

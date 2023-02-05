@@ -23,7 +23,7 @@ final class MapAggregateTypeResolverTest extends TestCase
     }
 
     #[Test]
-    public function it_throws_if_a_mapped_class_does_not_exist(): void
+    public function throws_if_a_mapped_class_does_not_exist(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage('All map keys must be class names that exist, FooBarBaz does not exist.');
@@ -33,7 +33,7 @@ final class MapAggregateTypeResolverTest extends TestCase
     }
 
     #[Test]
-    public function it_throws_if_a_mapped_value_is_not_an_aggregate_type(): void
+    public function throws_if_a_mapped_value_is_not_an_aggregate_type(): void
     {
         $badValue = new class () {
         };
@@ -46,7 +46,7 @@ final class MapAggregateTypeResolverTest extends TestCase
     }
 
     #[Test]
-    public function it_throws_if_cannot_resolve_an_aggregate_as_not_mapped(): void
+    public function throws_if_cannot_resolve_an_aggregate_as_not_mapped(): void
     {
         $this->expectException(CannotResolveAggregateType::class);
 

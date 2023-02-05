@@ -43,7 +43,25 @@ final class ClosureAggregateTypeResolverTest extends AggregateTypeResolverSpec
     }
 
     #[Test]
-    public function it_converts_exceptions_that_dont_conform_to_the_contract_thrown_from_the_closure(): void
+    public function rethrows_any_interface_compliant_exception_from_the_closure(): void
+    {
+        $resolver = new ClosureAggregateTypeResolver(
+            static function (object $aggregate): never {
+                throw CannotResolveAggregateType::of($aggregate);
+            }
+        );
+
+        $aggregate = User::register(UserId::generate(), Email::fromString('foo@example.com'));
+
+        try {
+            $resolver->resolve($aggregate);
+        } catch (CannotResolveAggregateType $exception) {
+            $this->assertNull($exception->getPrevious());
+        }
+    }
+
+    #[Test]
+    public function wraps_and_throws_for_any_non_interface_compliant_exception_from_the_closure(): void
     {
         $resolver = new ClosureAggregateTypeResolver(
             static function (object $aggregate): never {
@@ -58,24 +76,6 @@ final class ClosureAggregateTypeResolverTest extends AggregateTypeResolverSpec
         } catch (CannotResolveAggregateType $exception) {
             $this->assertInstanceOf(\RuntimeException::class, $exception->getPrevious());
             $this->assertSame('Foo Bar', $exception->getPrevious()->getMessage());
-        }
-    }
-
-    #[Test]
-    public function it_passes_through_exceptions_that_conform_to_the_contract_thrown_from_the_closure(): void
-    {
-        $resolver = new ClosureAggregateTypeResolver(
-            static function (object $aggregate): never {
-                throw CannotResolveAggregateType::of($aggregate);
-            }
-        );
-
-        $aggregate = User::register(UserId::generate(), Email::fromString('foo@example.com'));
-
-        try {
-            $resolver->resolve($aggregate);
-        } catch (CannotResolveAggregateType $exception) {
-            $this->assertNull($exception->getPrevious());
         }
     }
 }
