@@ -4,18 +4,17 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Lendable\Aggregate\AggregateVersion;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \Lendable\Aggregate\AggregateVersion
- */
+#[CoversClass(AggregateVersion::class)]
 final class AggregateVersionTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function it_can_be_constructed_from_an_integer_that_is_greater_than_or_equal_to_1(): void
+    #[Test]
+    public function constructable_with_an_integer_greater_than_or_equal_to_1(): void
     {
         $fixture = AggregateVersion::fromInteger(1);
 
@@ -25,18 +24,16 @@ final class AggregateVersionTest extends TestCase
     /**
      * @return iterable<string, array<int, mixed>>
      */
-    public function provideNegativeIntegerSet(): iterable
+    public static function provideNegativeIntegerSet(): iterable
     {
         yield '0' => [0];
         yield '-1' => [-1];
         yield '-PHP_INT_MAX' => [-\PHP_INT_MAX];
     }
 
-    /**
-     * @test
-     * @dataProvider provideNegativeIntegerSet
-     */
-    public function it_throws_when_constructing_from_integer_less_than_one(int $lessThanOne): void
+    #[DataProvider('provideNegativeIntegerSet')]
+    #[Test]
+    public function throws_if_constructed_with_a_less_than_or_equal_to_1(int $lessThanOne): void
     {
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage('Aggregate version must be >= 1.');
@@ -44,20 +41,16 @@ final class AggregateVersionTest extends TestCase
         AggregateVersion::fromInteger($lessThanOne);
     }
 
-    /**
-     * @test
-     */
-    public function it_can_provide_the_next_aggregate_version_that_follows_it(): void
+    #[Test]
+    public function provides_the_next_version_following_it(): void
     {
         $v1 = AggregateVersion::fromInteger(1);
         $this->assertSame(2, $v1->next()->toInteger());
         $this->assertSame(1, $v1->toInteger());
     }
 
-    /**
-     * @test
-     */
-    public function it_can_be_compare_with_other_versions_for_order(): void
+    #[Test]
+    public function comparable_to_other_instances_on_sequence_order(): void
     {
         $one = AggregateVersion::fromInteger(1);
         $two = AggregateVersion::fromInteger(2);
@@ -90,10 +83,8 @@ final class AggregateVersionTest extends TestCase
         $this->assertFalse($one->afterOrEquals($three));
     }
 
-    /**
-     * @test
-     */
-    public function it_equals_other_versions_of_the_same_value(): void
+    #[Test]
+    public function only_equals_other_instances_with_equal_value(): void
     {
         $instance = AggregateVersion::fromInteger(1);
         $sameValue = AggregateVersion::fromInteger(1);

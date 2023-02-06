@@ -4,18 +4,17 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
 use Lendable\Aggregate\CannotResolveAggregateType;
 
-/**
- * @covers \Lendable\Aggregate\CannotResolveAggregateType
- */
-final class CannotResolveAggregateTypeTest extends ExceptionTest
+#[CoversClass(CannotResolveAggregateType::class)]
+final class CannotResolveAggregateTypeTest extends ExceptionTestCase
 {
-    /**
-     * @test
-     * @dataProvider providePossibleCausesAndPreviousExceptions
-     */
-    public function it_constructs_as_expected(string $cause, ?\Throwable $previous): void
+    #[DataProvider('providePossibleCausesAndPreviousExceptions')]
+    #[Test]
+    public function constructs_with_a_formatted_message_from_input(string $cause, ?\Throwable $previous): void
     {
         $aggregateRoot = new \stdClass();
         $fixture = CannotResolveAggregateType::of($aggregateRoot, $cause, $previous);

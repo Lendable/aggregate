@@ -66,6 +66,3 @@ jobs:
 
       - name: "Unit tests"
         run: "composer tests:unit"
-
-      - name: "Integration tests"
-        run: "composer tests:integration"

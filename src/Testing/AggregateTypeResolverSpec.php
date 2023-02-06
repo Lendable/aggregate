@@ -27,10 +27,7 @@ abstract class AggregateTypeResolverSpec extends TestCase
      */
     abstract protected function createAggregateWithExpectedAggregateType(): object;
 
-    /**
-     * @test
-     */
-    public function it_resolves_an_aggregate_type_for_a_supported_aggregate(): void
+    final public function test_resolves_an_aggregate_type_for_a_supported_aggregate(): void
     {
         $resolver = $this->createResolver();
         $aggregate = $this->createAggregateWithExpectedAggregateType();

@@ -27,10 +27,7 @@ abstract class AggregateVersionExtractorSpec extends TestCase
      */
     abstract protected function createAggregateWithExpectedAggregateVersion(): object;
 
-    /**
-     * @test
-     */
-    public function it_extracts_an_aggregate_version_from_a_supported_aggregate(): void
+    final public function test_extracts_an_aggregate_version_from_a_supported_aggregate(): void
     {
         $extractor = $this->createExtractor();
         $aggregate = $this->createAggregateWithExpectedAggregateVersion();
