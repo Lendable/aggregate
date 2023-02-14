@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a2fb5caf1e28960fb2dc1ed523599d0",
+    "content-hash": "b56e3f80c1c36197069adefe2d46db6c",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -1281,16 +1281,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.15.13",
+            "version": "0.15.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "05df336f8e29873ed14c0790fbea68fa5de14f50"
+                "reference": "e16bff22569e912b95bbc26b492ba87dfb5342dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/05df336f8e29873ed14c0790fbea68fa5de14f50",
-                "reference": "05df336f8e29873ed14c0790fbea68fa5de14f50",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/e16bff22569e912b95bbc26b492ba87dfb5342dd",
+                "reference": "e16bff22569e912b95bbc26b492ba87dfb5342dd",
                 "shasum": ""
             },
             "require": {
@@ -1300,7 +1300,6 @@
             "conflict": {
                 "rector/rector-doctrine": "*",
                 "rector/rector-downgrade-php": "*",
-                "rector/rector-php-parser": "*",
                 "rector/rector-phpunit": "*",
                 "rector/rector-symfony": "*"
             },
@@ -1325,7 +1324,7 @@
             "description": "Instant Upgrade and Automated Refactoring of any PHP code",
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.15.13"
+                "source": "https://github.com/rectorphp/rector/tree/0.15.15"
             },
             "funding": [
                 {
@@ -1333,7 +1332,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-07T01:46:29+00:00"
+            "time": "2023-02-14T20:12:02+00:00"
         },
         {
             "name": "sebastian/cli-parser",
