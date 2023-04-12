@@ -42,10 +42,6 @@ final class User
     {
         $event->applyTo($this->state);
 
-        if ($this->version === null) {
-            $this->version = Version::fromInteger(1);
-        } else {
-            $this->version = $this->version->next();
-        }
+        $this->version = $this->version?->next() ?? Version::fromInteger(1);
     }
 }
