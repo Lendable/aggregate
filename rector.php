@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
 use Rector\Config\RectorConfig;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\PHPUnit\Set\PHPUnitLevelSetList;
@@ -18,6 +19,10 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->phpstanConfig(__DIR__.'/phpstan-rector.neon');
     $rectorConfig->importNames();
     $rectorConfig->importShortClasses(false);
+
+    $rectorConfig->skip([
+        FlipTypeControlToUseExclusiveTypeRector::class,
+    ]);
 
     $rectorConfig->sets([
         SetList::CODE_QUALITY,
