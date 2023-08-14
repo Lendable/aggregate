@@ -52,7 +52,7 @@ jobs:
         run: "composer security:check"
 
       - name: "Run coding style"
-        if: ${{ matrix.dependencies == 'locked' && matrix.php-version == '8.0' }}
+        if: ${{ matrix.dependencies == 'locked' && matrix.php-version == '8.1' }}
         run: "composer code-style:check"
 
       - name: "Run PHPStan"
