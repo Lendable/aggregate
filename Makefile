@@ -39,7 +39,7 @@ shell:
 	$(DOCKER_COMPOSE) exec -u $(EXEC_USER) $(CONTAINER) $(EXEC_SHELL)
 
 build: init
-	DOCKER_BUILDKIT=1 docker build --ssh default -f "${DIR}/local/Dockerfile.php-cli" -t $(PROJECT_NAME)_$(CONTAINER):latest --target dev .
+	${DOCKER_COMPOSE} build
 
 clean:
 	@$(DOCKER_COMPOSE) down -v --rmi local
