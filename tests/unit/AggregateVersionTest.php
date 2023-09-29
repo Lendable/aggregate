@@ -35,8 +35,11 @@ final class AggregateVersionTest extends TestCase
     #[Test]
     public function throws_if_constructed_with_a_less_than_or_equal_to_1(int $lessThanOne): void
     {
-        $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Aggregate version must be >= 1.');
+        $this->expectExceptionObject(
+            new \InvalidArgumentException(
+                \sprintf('Aggregate version must be >= 1, %d given.', $lessThanOne)
+            )
+        );
 
         AggregateVersion::fromInteger($lessThanOne);
     }
