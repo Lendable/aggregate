@@ -13,11 +13,18 @@ use Assert\AssertionFailedException;
 final class AggregateType
 {
     /**
+     * @var non-empty-string
+     */
+    private readonly string $value;
+
+    /**
      * @throws AssertionFailedException If $value is empty.
      */
-    private function __construct(private readonly string $value)
+    private function __construct(string $value)
     {
         Assertion::notEmpty($value, 'Aggregate type cannot be empty.');
+
+        $this->value = $value;
     }
 
     /**
@@ -28,6 +35,9 @@ final class AggregateType
         return new self($value);
     }
 
+    /**
+     * @return non-empty-string
+     */
     public function toString(): string
     {
         return $this->value;
