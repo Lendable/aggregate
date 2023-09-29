@@ -14,6 +14,9 @@ use Assert\AssertionFailedException;
  */
 final class AggregateVersion
 {
+    /**
+     * @var int<1, max>
+     */
     private int $version;
 
     /**
@@ -34,6 +37,9 @@ final class AggregateVersion
         return new self($version);
     }
 
+    /**
+     * @return int<1, max>
+     */
     public function toInteger(): int
     {
         return $this->version;
