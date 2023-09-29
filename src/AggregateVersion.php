@@ -20,17 +20,19 @@ final class AggregateVersion
     private int $version;
 
     /**
-     * @throws AssertionFailedException If the version is <= 0.
+     * @throws \InvalidArgumentException If the version is <= 0.
      */
     private function __construct(int $version)
     {
-        Assertion::greaterOrEqualThan($version, 1, 'Aggregate version must be >= 1.');
+        if ($version <= 0) {
+            throw new \InvalidArgumentException(\sprintf('Aggregate version must be >= 1, %d given.', $version));
+        }
 
         $this->version = $version;
     }
 
     /**
-     * @throws AssertionFailedException If the version is <= 0.
+     * @throws \InvalidArgumentException If the version is <= 0.
      */
     public static function fromInteger(int $version): self
     {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use http\Exception\InvalidArgumentException;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -36,7 +37,7 @@ final class AggregateVersionTest extends TestCase
     public function throws_if_constructed_with_a_less_than_or_equal_to_1(int $lessThanOne): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Aggregate version must be >= 1.');
+        $this->expectExceptionMessage('Aggregate version must be >= 1,');
 
         AggregateVersion::fromInteger($lessThanOne);
     }
