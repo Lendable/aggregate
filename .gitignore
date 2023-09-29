@@ -1,10 +1,6 @@
 # Composer
 /vendor
 
-# Scripts / executables
-/bin
-!/bin/deptrac
-
 # Dev tooling
 /phpunit.xml
 /.deptrac.cache

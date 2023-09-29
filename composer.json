@@ -43,7 +43,6 @@
     "allow-plugins": {
       "ergebnis/composer-normalize": true
     },
-    "bin-dir": "bin",
     "platform": {
       "php": "8.1.15"
     },
@@ -63,7 +62,7 @@
       "PHP_CS_FIXER_FUTURE_MODE=1 php-cs-fixer fix --diff --ansi --using-cache=no"
     ],
     "deptrac": [
-      "bin/deptrac analyze --ansi --no-progress"
+      "deptrac analyze --ansi --no-progress"
     ],
     "licenses:check": [
       "composer-license-checker"
