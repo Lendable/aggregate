@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
-use http\Exception\InvalidArgumentException;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\DataProvider;

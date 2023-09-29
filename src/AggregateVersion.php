@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Lendable\Aggregate;
 
-use Assert\Assertion;
-use Assert\AssertionFailedException;
-
 /**
  * The version of an aggregate.
  *
