@@ -6,7 +6,6 @@ services:
     tty: true
     build:
       context: .
-      dockerfile: Dockerfile.php-cli
       target: dev
     environment:
       SSH_AUTH_SOCK: "${SSH_AUTH_SOCK}"
@@ -17,4 +16,3 @@ services:
       PHP_IDE_CONFIG: "${PHP_IDE_CONFIG:-}"
     volumes:
       - "..:/app:rw"
-      - "${SSH_AUTH_SOCK}:${SSH_AUTH_SOCK}:ro"
