@@ -6,7 +6,6 @@ Dockerfile.php-cli  export-ignore
 Jenkinsfile         export-ignore
 phpstan.neon        export-ignore
 phpunit.xml.dist    export-ignore
-/bin                export-ignore
 /ci                 export-ignore
 /tests              export-ignore
 /composer.lock      -merge
