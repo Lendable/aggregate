@@ -47,6 +47,9 @@ jobs:
       - name: "Validate Composer dependencies"
         run: "composer validate"
 
+      - name: "Lint composer.json"
+        run: "composer normalize --dry-run"
+
       - name: "Check Composer dependency licenses"
         run: "composer licenses:check"
 
