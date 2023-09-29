@@ -5,17 +5,18 @@
          beStrictAboutOutputDuringTests="true"
          beStrictAboutTodoAnnotatedTests="true"
          bootstrap="tests/bootstrap.php">
-    <coverage>
-        <include>
-            <directory>./src/</directory>
-        </include>
-    </coverage>
-    <php>
-        <ini name="error_reporting" value="E_ALL &amp; ~E_DEPRECATED"/>
-    </php>
-    <testsuites>
-        <testsuite name="unit">
-            <directory>./tests/unit/</directory>
-        </testsuite>
-    </testsuites>
+  <coverage/>
+  <php>
+    <ini name="error_reporting" value="E_ALL &amp; ~E_DEPRECATED"/>
+  </php>
+  <testsuites>
+    <testsuite name="unit">
+      <directory>./tests/unit/</directory>
+    </testsuite>
+  </testsuites>
+  <source>
+    <include>
+      <directory>./src/</directory>
+    </include>
+  </source>
 </phpunit>
