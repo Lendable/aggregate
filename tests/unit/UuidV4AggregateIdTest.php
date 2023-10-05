@@ -8,7 +8,7 @@ use Lendable\Aggregate\UuidV4AggregateId;
 use PHPUnit\Framework\Attributes\CoversClass;
 
 #[CoversClass(UuidV4AggregateId::class)]
-final class UuidV4AggregateIdTest extends AggregateIdTest
+final class UuidV4AggregateIdTest extends AggregateIdTestSpecification
 {
     protected function idClass(): string
     {
