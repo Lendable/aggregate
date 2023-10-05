@@ -1,0 +1,30 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Tests\Unit\Lendable\Aggregate;
+
+use Lendable\Aggregate\UuidV7AggregateId;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
+
+#[CoversClass(UuidV7AggregateId::class)]
+final class UuidV7AggregateIdTest extends TestCase
+{
+    use AggregateIdTest;
+
+    protected function idClass(): string
+    {
+        return UuidV7AggregateId::class;
+    }
+
+    protected function exampleString(): string
+    {
+        return '01833ce0-3486-7bfd-84a1-ad157cf64005';
+    }
+
+    protected function uuidVersion(): int
+    {
+        return 7;
+    }
+}

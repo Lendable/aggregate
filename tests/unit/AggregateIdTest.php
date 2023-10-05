@@ -4,54 +4,69 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\Attributes\Test;
 use Lendable\Aggregate\AggregateId;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Rfc4122\FieldsInterface;
 use Ramsey\Uuid\Uuid;
 use Tests\Helper\Lendable\Aggregate\UuidUtil;
 
-#[CoversClass(AggregateId::class)]
-final class AggregateIdTest extends TestCase
+/**
+ * @mixin TestCase
+ */
+trait AggregateIdTest
 {
-    private const UUID_V4_STRING = '73d47cc6-e0c1-433b-9a6a-b68ed94f8ca6';
+    /** @return class-string<AggregateId> */
+    abstract protected function idClass(): string;
+
+    abstract protected function exampleString(): string;
+
+    abstract protected function uuidVersion(): int;
 
     #[Test]
     public function it_can_be_constructed_statically_from_a_uuid_string(): void
     {
-        $fixture = AggregateId::fromString(self::UUID_V4_STRING);
+        $fixture = $this->idClass()::fromString($this->exampleString());
 
-        $this->assertSame(self::UUID_V4_STRING, $fixture->toString());
-        $this->assertSame(UuidUtil::stringToBinaryString(self::UUID_V4_STRING), $fixture->toBinary());
+        $this->assertSame($this->exampleString(), $fixture->toString());
+        $this->assertSame(UuidUtil::stringToBinaryString($this->exampleString()), $fixture->toBinary());
     }
 
     #[Test]
     public function it_can_be_constructed_from_binary_via_static_factory(): void
     {
-        $binaryUuid = UuidUtil::stringToBinaryString(self::UUID_V4_STRING);
-        $fixture = AggregateId::fromBinary($binaryUuid);
+        $binaryUuid = UuidUtil::stringToBinaryString($this->exampleString());
+        $fixture = $this->idClass()::fromBinary($binaryUuid);
 
-        $this->assertSame(self::UUID_V4_STRING, $fixture->toString());
+        $this->assertSame($this->exampleString(), $fixture->toString());
         $this->assertSame($binaryUuid, $fixture->toBinary());
+    }
+
+    #[Test]
+    public function it_can_be_constructed_statically_from_a_ramsey_uuid(): void
+    {
+        $fixture = $this->idClass()::fromUuid(Uuid::fromString($this->exampleString()));
+
+        $this->assertSame($this->exampleString(), $fixture->toString());
+        $this->assertSame(UuidUtil::stringToBinaryString($this->exampleString()), $fixture->toBinary());
     }
 
     #[Test]
     public function it_can_be_generated(): void
     {
-        $instance = AggregateId::generate();
+        $instance = $this->idClass()::generate();
         $rawUuid = Uuid::fromString($instance->toString());
         $fields = $rawUuid->getFields();
         \assert($fields instanceof FieldsInterface);
-        $this->assertSame(4, $fields->getVersion());
+        $this->assertSame($this->uuidVersion(), $fields->getVersion());
     }
 
     #[Test]
     public function it_equals_other_aggregate_ids_with_an_equal_value(): void
     {
-        $id = AggregateId::fromString(self::UUID_V4_STRING);
-        $idSameValue = AggregateId::fromString(self::UUID_V4_STRING);
-        $idDifferentValue = AggregateId::fromString('37d40242-e110-4c9c-a712-15c2a9edbb7a');
+        $id = $this->idClass()::fromString($this->exampleString());
+        $idSameValue = $this->idClass()::fromString($this->exampleString());
+        $idDifferentValue = $this->idClass()::fromString('37d40242-e110-4c9c-a712-15c2a9edbb7a');
 
         $this->assertTrue($id->equals($id));
         $this->assertTrue($id->equals($idSameValue));

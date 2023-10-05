@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
+use Lendable\Aggregate\UuidV4AggregateId;
 use PHPUnit\Framework\Attributes\Test;
 use Lendable\Aggregate\AggregateId;
 use Lendable\Aggregate\AggregateIdExtractor;
@@ -22,13 +23,13 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
     protected function createExtractor(): AggregateIdExtractor
     {
         return new ClosureAggregateIdExtractor(
-            static fn (User $user): AggregateId => AggregateId::fromString($user->id()->toString())
+            static fn (User $user): AggregateId => UuidV4AggregateId::fromString($user->id()->toString())
         );
     }
 
     protected function createExpectedAggregateId(): AggregateId
     {
-        return AggregateId::fromString(self::DEFAULT_V4_UUID);
+        return UuidV4AggregateId::fromString(self::DEFAULT_V4_UUID);
     }
 
     protected function createAggregateWithExpectedAggregateId(): object
