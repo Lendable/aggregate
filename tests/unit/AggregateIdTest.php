@@ -11,10 +11,7 @@ use Ramsey\Uuid\Rfc4122\FieldsInterface;
 use Ramsey\Uuid\Uuid;
 use Tests\Helper\Lendable\Aggregate\UuidUtil;
 
-/**
- * @mixin TestCase
- */
-trait AggregateIdTest
+abstract class AggregateIdTest extends TestCase
 {
     /** @return class-string<AggregateId> */
     abstract protected function idClass(): string;

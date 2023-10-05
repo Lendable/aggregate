@@ -8,29 +8,29 @@ use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
 /**
- * Universally unique identifier for an aggregate.
+ * @mixin AggregateId
  */
 trait UuidAggregateIdTrait
 {
-    abstract public static function generate(): self;
+    abstract public static function generate(): static;
 
     private function __construct(protected readonly UuidInterface $uuid)
     {
     }
 
-    public static function fromString(string $uuid): self
+    public static function fromString(string $uuid): static
     {
-        return new self(Uuid::fromString($uuid));
+        return new static(Uuid::fromString($uuid));
     }
 
-    public static function fromBinary(string $binaryUuid): self
+    public static function fromBinary(string $binaryUuid): static
     {
-        return new self(Uuid::fromBytes($binaryUuid));
+        return new static(Uuid::fromBytes($binaryUuid));
     }
 
-    public static function fromUuid(UuidInterface $uuid): self
+    public static function fromUuid(UuidInterface $uuid): static
     {
-        return new self($uuid);
+        return new static($uuid);
     }
 
     public function toString(): string
@@ -45,6 +45,7 @@ trait UuidAggregateIdTrait
 
     public function equals(AggregateId $other): bool
     {
-        return $this->uuid->toString() === $other->toString();
+        return $other instanceof $this
+            && $this->uuid->toString() === $other->toString();
     }
 }

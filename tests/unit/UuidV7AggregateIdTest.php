@@ -6,13 +6,10 @@ namespace Tests\Unit\Lendable\Aggregate;
 
 use Lendable\Aggregate\UuidV7AggregateId;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
 
 #[CoversClass(UuidV7AggregateId::class)]
-final class UuidV7AggregateIdTest extends TestCase
+final class UuidV7AggregateIdTest extends AggregateIdTest
 {
-    use AggregateIdTest;
-
     protected function idClass(): string
     {
         return UuidV7AggregateId::class;

@@ -11,13 +11,13 @@ use Ramsey\Uuid\UuidInterface;
  */
 interface AggregateId
 {
-    public static function fromString(string $uuid): self;
+    public static function fromString(string $uuid): static;
 
-    public static function fromBinary(string $binaryUuid): self;
+    public static function fromBinary(string $binaryUuid): static;
 
-    public static function fromUuid(UuidInterface $uuid): self;
+    public static function fromUuid(UuidInterface $uuid): static;
 
-    public static function generate(): self;
+    public static function generate(): static;
 
     public function toString(): string;
 
