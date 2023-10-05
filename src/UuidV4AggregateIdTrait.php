@@ -7,13 +7,13 @@ namespace Lendable\Aggregate;
 use Ramsey\Uuid\Uuid;
 
 /**
- * Universally unique identifier for an aggregate.
+ * @mixin AggregateId
  */
 trait UuidV4AggregateIdTrait
 {
     use UuidAggregateIdTrait;
 
-    public static function generate(): self
+    public static function generate(): static
     {
         return new self(Uuid::uuid4());
     }

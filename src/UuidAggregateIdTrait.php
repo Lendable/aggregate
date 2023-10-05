@@ -7,9 +7,6 @@ namespace Lendable\Aggregate;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
-/**
- * @mixin AggregateId
- */
 trait UuidAggregateIdTrait
 {
     abstract public static function generate(): static;
