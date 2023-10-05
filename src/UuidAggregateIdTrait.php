@@ -40,9 +40,14 @@ trait UuidAggregateIdTrait
         return $this->uuid->getBytes();
     }
 
+    public function toUuid(): UuidInterface
+    {
+        return $this->uuid;
+    }
+
     public function equals(AggregateId $other): bool
     {
         return $other instanceof $this
-            && $this->uuid->toString() === $other->toString();
+            && $this->uuid->equals($other->toUuid());
     }
 }

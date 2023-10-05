@@ -23,5 +23,7 @@ interface AggregateId
 
     public function toBinary(): string;
 
+    public function toUuid(): UuidInterface;
+
     public function equals(self $other): bool;
 }
