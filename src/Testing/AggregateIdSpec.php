@@ -12,7 +12,7 @@ use Ramsey\Uuid\Uuid;
 use Tests\Fixture\Lendable\Aggregate\FooAggregateId;
 use Tests\Helper\Lendable\Aggregate\UuidUtil;
 
-abstract class AggregateIdTestSpec extends TestCase
+abstract class AggregateIdSpec extends TestCase
 {
     /**
      * @return class-string<AggregateId>
