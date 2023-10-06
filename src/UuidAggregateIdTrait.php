@@ -7,13 +7,22 @@ namespace Lendable\Aggregate;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
+/**
+ * @mixin AggregateId
+ */
 trait UuidAggregateIdTrait
 {
     abstract public static function generate(): static;
 
     private function __construct(protected readonly UuidInterface $uuid)
     {
+        $this->validate($uuid);
     }
+
+    /**
+     * @throws \InvalidArgumentException If the UUID is the wrong version.
+     */
+    abstract protected function validate(UuidInterface $uuid): void;
 
     public static function fromString(string $uuid): static
     {

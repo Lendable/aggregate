@@ -7,6 +7,7 @@ namespace Tests\Fixture\Lendable\Aggregate;
 use Lendable\Aggregate\AggregateId;
 use Lendable\Aggregate\UuidAggregateIdTrait;
 use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 
 final class FooAggregateId implements AggregateId
 {
@@ -15,5 +16,9 @@ final class FooAggregateId implements AggregateId
     public static function generate(): static
     {
         return new self(Uuid::uuid4());
+    }
+
+    protected function validate(UuidInterface $uuid): void
+    {
     }
 }
