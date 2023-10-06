@@ -9,6 +9,7 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Rfc4122\FieldsInterface;
 use Ramsey\Uuid\Uuid;
+use Tests\Fixture\Lendable\Aggregate\FooAggregateId;
 use Tests\Helper\Lendable\Aggregate\UuidUtil;
 
 abstract class AggregateIdTestSpec extends TestCase
@@ -23,7 +24,7 @@ abstract class AggregateIdTestSpec extends TestCase
     abstract protected function uuidVersion(): int;
 
     #[Test]
-    public function it_can_be_constructed_statically_from_a_uuid_string(): void
+    final public function constructable_from_a_uuid_string(): void
     {
         $fixture = $this->idClass()::fromString($this->exampleString());
 
@@ -32,7 +33,7 @@ abstract class AggregateIdTestSpec extends TestCase
     }
 
     #[Test]
-    public function it_can_be_constructed_from_binary_via_static_factory(): void
+    final public function constructable_from_binary(): void
     {
         $binaryUuid = UuidUtil::stringToBinaryString($this->exampleString());
         $fixture = $this->idClass()::fromBinary($binaryUuid);
@@ -42,7 +43,7 @@ abstract class AggregateIdTestSpec extends TestCase
     }
 
     #[Test]
-    public function it_can_be_constructed_statically_from_a_ramsey_uuid(): void
+    final public function constructable_from_ramsey_uuid(): void
     {
         $fixture = $this->idClass()::fromUuid(Uuid::fromString($this->exampleString()));
 
@@ -51,7 +52,7 @@ abstract class AggregateIdTestSpec extends TestCase
     }
 
     #[Test]
-    public function it_can_be_generated(): void
+    final public function generatable(): void
     {
         $instance = $this->idClass()::generate();
         $rawUuid = Uuid::fromString($instance->toString());
@@ -61,7 +62,7 @@ abstract class AggregateIdTestSpec extends TestCase
     }
 
     #[Test]
-    public function it_equals_other_aggregate_ids_with_an_equal_value(): void
+    final public function equals_other_aggregate_ids_with_an_equal_value(): void
     {
         $id = $this->idClass()::fromString($this->exampleString());
         $idSameValue = $this->idClass()::fromString($this->exampleString());
@@ -72,5 +73,15 @@ abstract class AggregateIdTestSpec extends TestCase
         $this->assertTrue($idSameValue->equals($id));
         $this->assertFalse($id->equals($idDifferentValue));
         $this->assertFalse($idDifferentValue->equals($id));
+    }
+
+    #[Test]
+    public function does_not_equals_other_aggregate_ids_of_different_class_with_an_equal_value(): void
+    {
+        $id = $this->idClass()::fromString($this->exampleString());
+        $idSameValue = FooAggregateId::fromString($this->exampleString());
+        $this->assertFalse($id->equals($idSameValue));
+        /** @phpstan-ignore-next-line */
+        $this->assertFalse($idSameValue->equals($id));
     }
 }

@@ -25,5 +25,8 @@ interface AggregateId
 
     public function toUuid(): UuidInterface;
 
+    /**
+     * @param static $other
+     */
     public function equals(self $other): bool;
 }
