@@ -81,7 +81,7 @@ abstract class AggregateIdTestSpec extends TestCase
         $id = $this->idClass()::fromString($this->exampleString());
         $idSameValue = FooAggregateId::fromString($this->exampleString());
         $this->assertFalse($id->equals($idSameValue));
-        /** @phpstan-ignore-next-line */
+        /* @phpstan-ignore-next-line */
         $this->assertFalse($idSameValue->equals($id));
     }
 }
