@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Lendable\Aggregate;
+namespace Lendable\Aggregate\Testing;
 
 use Lendable\Aggregate\AggregateId;
 use PHPUnit\Framework\Attributes\Test;
@@ -11,9 +11,11 @@ use Ramsey\Uuid\Rfc4122\FieldsInterface;
 use Ramsey\Uuid\Uuid;
 use Tests\Helper\Lendable\Aggregate\UuidUtil;
 
-abstract class AggregateIdTestSpecification extends TestCase
+abstract class AggregateIdTestSpec extends TestCase
 {
-    /** @return class-string<AggregateId> */
+    /**
+     * @return class-string<AggregateId>
+     */
     abstract protected function idClass(): string;
 
     abstract protected function exampleString(): string;
