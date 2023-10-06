@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Lendable\Aggregate;
 
-use Lendable\Aggregate\Testing\AggregateIdTestSpec;
+use Lendable\Aggregate\Testing\AggregateIdSpec;
 use Lendable\Aggregate\UuidV7AggregateId;
 use PHPUnit\Framework\Attributes\CoversClass;
 
 #[CoversClass(UuidV7AggregateId::class)]
-final class UuidV7AggregateIdTest extends AggregateIdTestSpec
+final class UuidV7AggregateIdTest extends AggregateIdSpec
 {
     protected function idClass(): string
     {
