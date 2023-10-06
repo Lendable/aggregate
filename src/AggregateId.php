@@ -23,8 +23,6 @@ interface AggregateId
 
     public function toBinary(): string;
 
-    public function toUuid(): UuidInterface;
-
     /**
      * @param static $other
      */
