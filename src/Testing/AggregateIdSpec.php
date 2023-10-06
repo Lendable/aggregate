@@ -19,6 +19,9 @@ abstract class AggregateIdSpec extends TestCase
      */
     abstract protected function idClass(): string;
 
+    /**
+     * @return non-empty-string
+     */
     abstract protected function exampleString(): string;
 
     abstract protected function uuidVersion(): int;
