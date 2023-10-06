@@ -10,13 +10,18 @@ final class AggregateIdFactory
 {
     /**
      * @param array<non-empty-string, class-string<AggregateId>> $map
+     *
+     * @throws \InvalidArgumentException If the map is empty.
      */
     public function __construct(private readonly array $map)
     {
+        if ($map === []) {
+            throw new \InvalidArgumentException('Map cannot be empty.');
+        }
     }
 
     /**
-     * @throws AggregateIdImplementationNotKnown
+     * @throws AggregateIdImplementationNotKnown If the aggregate type is not mapped.
      */
     public function fromUuid(AggregateType $aggregateType, UuidInterface $value): AggregateId
     {
@@ -26,7 +31,7 @@ final class AggregateIdFactory
     /**
      * @param non-empty-string $value
      *
-     * @throws AggregateIdImplementationNotKnown
+     * @throws AggregateIdImplementationNotKnown If the aggregate type is not mapped.
      */
     public function fromBinary(AggregateType $aggregateType, string $value): AggregateId
     {
@@ -36,7 +41,7 @@ final class AggregateIdFactory
     /**
      * @param non-empty-string $value
      *
-     * @throws AggregateIdImplementationNotKnown
+     * @throws AggregateIdImplementationNotKnown If the aggregate type is not mapped.
      */
     public function fromString(AggregateType $aggregateType, string $value): AggregateId
     {
