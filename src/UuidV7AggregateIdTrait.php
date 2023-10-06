@@ -15,6 +15,6 @@ trait UuidV7AggregateIdTrait
 
     public static function generate(): static
     {
-        return new self(Uuid::uuid7());
+        return new static(Uuid::uuid7());
     }
 }
