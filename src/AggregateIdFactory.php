@@ -9,7 +9,7 @@ use Ramsey\Uuid\UuidInterface;
 final class AggregateIdFactory
 {
     /**
-     * @param array<non-empty-string, class-string<AggregateId>> $map
+     * @param non-empty-array<non-empty-string, class-string<AggregateId>> $map
      *
      * @throws \InvalidArgumentException If the map is empty.
      */

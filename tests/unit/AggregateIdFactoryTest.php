@@ -121,6 +121,6 @@ final class AggregateIdFactoryTest extends TestCase
     {
         $this->expectExceptionObject(new \InvalidArgumentException('Map cannot be empty.'));
 
-        new AggregateIdFactory([]);
+        new AggregateIdFactory([]); // @phpstan-ignore-line
     }
 }
