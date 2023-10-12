@@ -14,9 +14,7 @@ final class MapAggregateTypeResolver implements AggregateTypeResolver
     /**
      * @param array<class-string<TAggregateRoot>, AggregateType> $map
      */
-    public function __construct(private readonly array $map)
-    {
-    }
+    public function __construct(private readonly array $map) {}
 
     public function resolve(object $aggregate): AggregateType
     {

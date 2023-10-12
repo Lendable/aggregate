@@ -9,9 +9,7 @@ use Tests\Fixture\Lendable\Aggregate\Blog\Domain\UserId;
 
 final class UserRegistered extends UserEvent
 {
-    public function __construct(private readonly UserId $id, private readonly Email $email)
-    {
-    }
+    public function __construct(private readonly UserId $id, private readonly Email $email) {}
 
     public function id(): UserId
     {

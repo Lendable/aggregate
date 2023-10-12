@@ -10,9 +10,7 @@ use Ramsey\Uuid\UuidInterface;
 
 final class UserId
 {
-    private function __construct(private readonly UuidInterface $uuid)
-    {
-    }
+    private function __construct(private readonly UuidInterface $uuid) {}
 
     public static function fromString(string $uuid): self
     {

@@ -8,9 +8,7 @@ use Ramsey\Uuid\Uuid;
 
 final class UuidUtil
 {
-    private function __construct()
-    {
-    }
+    private function __construct() {}
 
     /**
      * @param non-empty-string $uuid

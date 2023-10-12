@@ -20,7 +20,7 @@ final class ClosureAggregateVersionExtractorTest extends AggregateVersionExtract
     protected function createExtractor(): AggregateVersionExtractor
     {
         return new ClosureAggregateVersionExtractor(
-            static fn (User $user): AggregateVersion => AggregateVersion::fromInteger($user->version()->toInteger())
+            static fn(User $user): AggregateVersion => AggregateVersion::fromInteger($user->version()->toInteger())
         );
     }
 

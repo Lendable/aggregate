@@ -13,9 +13,7 @@ final class ClosureAggregateVersionExtractor implements AggregateVersionExtracto
     /**
      * @phpstan-param \Closure(T): AggregateVersion $closure
      */
-    public function __construct(private readonly \Closure $closure)
-    {
-    }
+    public function __construct(private readonly \Closure $closure) {}
 
     /**
      * @phpstan-param T $aggregate
