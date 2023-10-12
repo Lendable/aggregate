@@ -14,9 +14,7 @@ trait UuidAggregateIdTrait
 {
     abstract public static function generate(): static;
 
-    private function __construct(private readonly UuidInterface $uuid)
-    {
-    }
+    private function __construct(private readonly UuidInterface $uuid) {}
 
     public static function fromString(string $uuid): static
     {

@@ -13,9 +13,7 @@ final class ClosureAggregateIdExtractor implements AggregateIdExtractor
     /**
      * @phpstan-param \Closure(T): AggregateId $closure
      */
-    public function __construct(private readonly \Closure $closure)
-    {
-    }
+    public function __construct(private readonly \Closure $closure) {}
 
     /**
      * @phpstan-param T $aggregate

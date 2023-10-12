@@ -30,8 +30,7 @@ final class MapAggregateTypeResolverTest extends TestCase
         $fixture = new MapAggregateTypeResolver([\stdClass::class => AggregateType::fromString('foo')]);
         $fixture->resolve(
             // @phpstan-ignore-next-line intentional bad method call violating static analysis for runtime check.
-            new class () {
-            }
+            new class () {}
         );
     }
 }

@@ -13,9 +13,7 @@ final class UserState
 
     private Email $email;
 
-    private function __construct()
-    {
-    }
+    private function __construct() {}
 
     public static function empty(): self
     {
