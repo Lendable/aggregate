@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Lendable\Aggregate;
 
-use Assert\Assertion;
-use Assert\AssertionFailedException;
-
 /**
  * A type classification of an aggregate.
  */
@@ -18,17 +15,20 @@ final class AggregateType
     private readonly string $value;
 
     /**
-     * @throws AssertionFailedException If $value is empty.
+     * @throws \InvalidArgumentException If $value is empty.
      */
     private function __construct(string $value)
     {
-        Assertion::notEmpty($value, 'Aggregate type cannot be empty.');
+        if (\trim($value) === '') {
+            throw new \InvalidArgumentException('Aggregate type cannot be empty.');
+        }
 
+        /** @var non-empty-string $value */
         $this->value = $value;
     }
 
     /**
-     * @throws AssertionFailedException If $value is empty.
+     * @throws \InvalidArgumentException If $value is empty.
      */
     public static function fromString(string $value): self
     {
