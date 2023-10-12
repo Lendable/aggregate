@@ -23,7 +23,7 @@ final class ClosureAggregateIdExtractorTest extends AggregateIdExtractorSpec
     protected function createExtractor(): AggregateIdExtractor
     {
         return new ClosureAggregateIdExtractor(
-            static fn (User $user): AggregateId => UuidV4AggregateId::fromString($user->id()->toString())
+            static fn(User $user): AggregateId => UuidV4AggregateId::fromString($user->id()->toString())
         );
     }
 
