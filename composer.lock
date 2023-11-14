@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b6903d458c379a78113e187a1e94b0c",
+    "content-hash": "b837f116a7d54b0091e47ba528526f8f",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -1138,16 +1138,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.38.0",
+            "version": "v3.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "2317318f4187904d6331e68ae730808b6c3ae98a"
+                "reference": "b00e057155e00bbfaf3e753590dec01e549770f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/2317318f4187904d6331e68ae730808b6c3ae98a",
-                "reference": "2317318f4187904d6331e68ae730808b6c3ae98a",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/b00e057155e00bbfaf3e753590dec01e549770f7",
+                "reference": "b00e057155e00bbfaf3e753590dec01e549770f7",
                 "shasum": ""
             },
             "require": {
@@ -1184,9 +1184,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.38.0"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.38.2"
             },
-            "time": "2023-11-07T08:45:37+00:00"
+            "time": "2023-11-14T00:19:50+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
@@ -1940,16 +1940,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.18.7",
+            "version": "0.18.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "caba0e294a1228f64f8a9cfd0d715cc8af47c4da"
+                "reference": "374bab157a41f6849556edc53125f856eb6c1c8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/caba0e294a1228f64f8a9cfd0d715cc8af47c4da",
-                "reference": "caba0e294a1228f64f8a9cfd0d715cc8af47c4da",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/374bab157a41f6849556edc53125f856eb6c1c8c",
+                "reference": "374bab157a41f6849556edc53125f856eb6c1c8c",
                 "shasum": ""
             },
             "require": {
@@ -1984,7 +1984,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.18.7"
+                "source": "https://github.com/rectorphp/rector/tree/0.18.8"
             },
             "funding": [
                 {
@@ -1992,7 +1992,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-13T10:11:05+00:00"
+            "time": "2023-11-14T15:30:19+00:00"
         },
         {
             "name": "sebastian/cli-parser",
