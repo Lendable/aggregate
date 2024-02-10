@@ -1,6 +1,6 @@
 FROM php:8.1.23-cli-alpine as base
 
-COPY --from=composer/composer:2.6.6-bin /composer /usr/bin/composer
+COPY --from=composer/composer:2.7.1-bin /composer /usr/bin/composer
 
 RUN apk add --no-cache git openssh \
     && mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
