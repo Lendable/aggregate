@@ -6,14 +6,14 @@ namespace Lendable\Aggregate;
 
 use Ramsey\Uuid\UuidInterface;
 
-final class AggregateIdFactory
+final readonly class AggregateIdFactory
 {
     /**
      * @param non-empty-array<non-empty-string, class-string<AggregateId>> $map
      *
      * @throws \InvalidArgumentException If the map is empty.
      */
-    public function __construct(private readonly array $map)
+    public function __construct(private array $map)
     {
         if ($map === []) {
             throw new \InvalidArgumentException('Map cannot be empty.');

@@ -8,12 +8,12 @@ namespace Lendable\Aggregate;
  * @phpstan-template T of object
  * @template-implements AggregateTypeResolver<T>
  */
-final class ClosureAggregateTypeResolver implements AggregateTypeResolver
+final readonly class ClosureAggregateTypeResolver implements AggregateTypeResolver
 {
     /**
      * @phpstan-param \Closure(T): AggregateType $closure
      */
-    public function __construct(private readonly \Closure $closure) {}
+    public function __construct(private \Closure $closure) {}
 
     /**
      * @phpstan-param T $aggregate

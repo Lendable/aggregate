@@ -8,12 +8,12 @@ namespace Lendable\Aggregate;
  * @phpstan-template T of object
  * @template-implements AggregateIdExtractor<T>
  */
-final class ClosureAggregateIdExtractor implements AggregateIdExtractor
+final readonly class ClosureAggregateIdExtractor implements AggregateIdExtractor
 {
     /**
      * @phpstan-param \Closure(T): AggregateId $closure
      */
-    public function __construct(private readonly \Closure $closure) {}
+    public function __construct(private \Closure $closure) {}
 
     /**
      * @phpstan-param T $aggregate
