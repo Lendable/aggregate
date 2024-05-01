@@ -8,12 +8,12 @@ namespace Lendable\Aggregate;
  * @phpstan-template T of object
  * @template-implements AggregateVersionExtractor<T>
  */
-final class ClosureAggregateVersionExtractor implements AggregateVersionExtractor
+final readonly class ClosureAggregateVersionExtractor implements AggregateVersionExtractor
 {
     /**
      * @phpstan-param \Closure(T): AggregateVersion $closure
      */
-    public function __construct(private readonly \Closure $closure) {}
+    public function __construct(private \Closure $closure) {}
 
     /**
      * @phpstan-param T $aggregate

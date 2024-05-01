@@ -7,12 +7,12 @@ namespace Lendable\Aggregate;
 /**
  * A type classification of an aggregate.
  */
-final class AggregateType
+final readonly class AggregateType
 {
     /**
      * @var non-empty-string
      */
-    private readonly string $value;
+    private string $value;
 
     /**
      * @throws \InvalidArgumentException If $value is empty.

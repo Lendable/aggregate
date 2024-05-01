@@ -8,9 +8,9 @@ use Ramsey\Uuid\Rfc4122\FieldsInterface;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
-final class UserId
+final readonly class UserId
 {
-    private function __construct(private readonly UuidInterface $uuid) {}
+    private function __construct(private UuidInterface $uuid) {}
 
     public static function fromString(string $uuid): self
     {

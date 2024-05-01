@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Fixture\Lendable\Aggregate\Blog\Domain;
 
-final class Email
+final readonly class Email
 {
-    public function __construct(private readonly string $value) {}
+    public function __construct(private string $value) {}
 
     public static function fromString(string $value): self
     {
