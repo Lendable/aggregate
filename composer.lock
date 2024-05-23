@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "17e29f4bcb363edb8d14b6e7ad336fdd",
+    "content-hash": "018aa2c9a3d22d1109fa40a4a47820fd",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -1944,16 +1944,16 @@
         },
         {
             "name": "qossmic/deptrac",
-            "version": "2.0.0.beta",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qossmic/deptrac.git",
-                "reference": "5da9063f0192bc1aa43de93e65feb5f46eee274e"
+                "reference": "1b6bcbe968d9dce374f969421105fd9f6afea387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qossmic/deptrac/zipball/5da9063f0192bc1aa43de93e65feb5f46eee274e",
-                "reference": "5da9063f0192bc1aa43de93e65feb5f46eee274e",
+                "url": "https://api.github.com/repos/qossmic/deptrac/zipball/1b6bcbe968d9dce374f969421105fd9f6afea387",
+                "reference": "1b6bcbe968d9dce374f969421105fd9f6afea387",
                 "shasum": ""
             },
             "require": {
@@ -1983,9 +1983,9 @@
             "description": "Deptrac is a static code analysis tool that helps to enforce rules for dependencies between software layers.",
             "support": {
                 "issues": "https://github.com/qossmic/deptrac/issues",
-                "source": "https://github.com/qossmic/deptrac/tree/2.0.0.beta"
+                "source": "https://github.com/qossmic/deptrac/tree/2.0.0"
             },
-            "time": "2024-04-14T08:25:29+00:00"
+            "time": "2024-04-27T20:53:26+00:00"
         },
         {
             "name": "rector/rector",
@@ -3730,9 +3730,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "qossmic/deptrac": 15
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
