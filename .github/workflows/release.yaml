@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   release-please:
-    runs-on: [self-hosted, m-0.25-std, X64]
+    runs-on: ubuntu-latest
     name: Release Automation
     steps:
       - uses: actions/create-github-app-token@v1
