@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   release-please:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: Release Automation
     steps:
       - uses: actions/create-github-app-token@v1
