@@ -1308,16 +1308,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.68.3",
+            "version": "v3.68.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "125e3d3b018ef753a9533d1712891e3c6067f0e4"
+                "reference": "4a0a5cfd39b0677017a85f0fc252d3e8a6a6c02c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/125e3d3b018ef753a9533d1712891e3c6067f0e4",
-                "reference": "125e3d3b018ef753a9533d1712891e3c6067f0e4",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/4a0a5cfd39b0677017a85f0fc252d3e8a6a6c02c",
+                "reference": "4a0a5cfd39b0677017a85f0fc252d3e8a6a6c02c",
                 "shasum": ""
             },
             "require": {
@@ -1354,9 +1354,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.68.3"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.68.5"
             },
-            "time": "2025-01-27T16:38:03+00:00"
+            "time": "2025-01-30T17:01:41+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
@@ -1950,16 +1950,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.3",
+            "version": "11.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "30e319e578a7b5da3543073e30002bf82042f701"
+                "reference": "b9a975972f580c0491f834eb0818ad2b32fd8bba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/30e319e578a7b5da3543073e30002bf82042f701",
-                "reference": "30e319e578a7b5da3543073e30002bf82042f701",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b9a975972f580c0491f834eb0818ad2b32fd8bba",
+                "reference": "b9a975972f580c0491f834eb0818ad2b32fd8bba",
                 "shasum": ""
             },
             "require": {
@@ -2031,7 +2031,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.3"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.5"
             },
             "funding": [
                 {
@@ -2047,7 +2047,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-13T09:36:00+00:00"
+            "time": "2025-01-29T14:01:11+00:00"
         },
         {
             "name": "psr/container",
