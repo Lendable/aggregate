@@ -26,7 +26,6 @@
     "qossmic/deptrac": "^2.0.1",
     "rector/rector": "^1.2.2"
   },
-  "repositories": [],
   "autoload": {
     "psr-4": {
       "Lendable\\Aggregate\\": "src/"
