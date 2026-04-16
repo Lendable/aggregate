@@ -15,7 +15,7 @@ abstract class AggregateIdExtractorSpec extends TestCase
 {
     use ValueObjectAssertions;
 
-    protected const DEFAULT_V4_UUID = 'b96e8609-e6ef-4d62-a29e-45012fdd6d5a';
+    protected const string DEFAULT_V4_UUID = 'b96e8609-e6ef-4d62-a29e-45012fdd6d5a';
 
     /**
      * @phpstan-return AggregateIdExtractor<T>

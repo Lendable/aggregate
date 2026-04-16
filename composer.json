@@ -10,13 +10,13 @@
     }
   ],
   "require": {
-    "php": "^8.2",
+    "php": "^8.3",
     "ramsey/uuid": "^4.5"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.43.0",
     "lendable/composer-license-checker": "^1.2.1",
-    "php-cs-fixer/shim": "^3.61.1",
+    "php-cs-fixer/shim": "^3.95.1",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
     "phpstan/phpstan": "^2.1.47",
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
@@ -43,7 +43,7 @@
       "ergebnis/composer-normalize": true
     },
     "platform": {
-      "php": "8.2"
+      "php": "8.3"
     },
     "sort-packages": true
   },
