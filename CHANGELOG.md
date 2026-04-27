@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Lendable/aggregate/compare/1.2.0...1.2.1) (2026-04-27)
+
+
+### Fixes
+
+* Update .gitattributes ([#897](https://github.com/Lendable/aggregate/issues/897)) ([dffe897](https://github.com/Lendable/aggregate/commit/dffe89742d9a0e1eeaf61aab86f0bcb3155a43e4))
+
 ## [1.2.0](https://github.com/Lendable/aggregate/compare/1.1.4...1.2.0) (2026-04-16)
 
 
