@@ -58,3 +58,5 @@ npm exec --yes --package=@lendable/ai-agents-cli@latest -- agents lint --source=
 ```
 
 If you hit HTTP 401/403 fetching from the registry, this machine isn't authenticated to Lendable's Artifactory yet. Open the Getting Started guide and copy the Bootstrap prompt from there: https://automatic-sniffle-qjwj75e.pages.github.io/packages/ai-agents-cli/getting-started/
+
+For the runbook on installing/upgrading/removing `@lendable/ai-*` packages, see [`.agents/skills/using-agents-cli/SKILL.md`](./.agents/skills/using-agents-cli/SKILL.md).
