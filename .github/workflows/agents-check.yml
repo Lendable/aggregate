@@ -1,0 +1,20 @@
+name: agents-check
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.agents/**'
+      - '.mcp.json'
+      - '.claude/**'
+      - '.codex/**'
+      - '.cursor/mcp.json'
+      - '.github/workflows/agents-check.yml'
+
+jobs:
+  agents-check:
+    runs-on: lendable-small-arm64-linux
+    steps:
+      - uses: actions/checkout@v6
+      - uses: Lendable/ai/packages/ai-agents-check-action@main
+        with:
+          artifactory-npm-token: ${{ secrets.ARTIFACTORY_NPM_ACCESS_TOKEN }}
