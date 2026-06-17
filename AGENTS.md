@@ -1,6 +1,6 @@
 # Lendable Aggregate
 
-`lendable/aggregate` is a PHP library providing supporting functionality to bridge domain and infrastructure interactions for aggregates within event sourcing systems. It does not help build out your domain; instead it provides interfaces and base functionality for an infrastructure layer to interact with aggregate classes without requiring them to implement library-specific interfaces. The core contracts are `AggregateIdExtractor`, `AggregateTypeResolver`, and `AggregateVersionExtractor`, with matching `*Spec` base classes under `Lendable\Aggregate\Testing` to ease testing of implementations.
+`lendable/aggregate` bridges domain and infrastructure interactions for aggregates in event-sourcing systems, providing infrastructure-layer contracts (`AggregateIdExtractor`, `AggregateTypeResolver`, `AggregateVersionExtractor`) without coupling your domain classes to the library. See [README.md](./README.md) for the full component reference, testing-support classes, and usage examples.
 
 - **Type:** Composer library (`lendable/aggregate`), distributed via Packagist.
 - **Requirements:** PHP >= 8.3.
