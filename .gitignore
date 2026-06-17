@@ -7,3 +7,6 @@
 /.phpunit.result.cache
 /.php-cs-fixer.cache
 /local/.env
+
+# Lendable agents CLI tarball cache (Mode B / non-JS install path).
+.agents/.lendable-cache/
