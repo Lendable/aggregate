@@ -10,8 +10,8 @@ on:
 
 jobs:
   ci:
-    name: "Execute"
-    runs-on: ${{ matrix.operating-system }}
+    name: "Execute (PHP ${{ matrix.php-version }} with ${{ matrix.dependencies }} deps)"
+    runs-on: [ubuntu-slim]
 
     strategy:
       fail-fast: false
@@ -23,8 +23,6 @@ jobs:
         php-version:
           - "8.4"
           - "8.5"
-        operating-system:
-          - "ubuntu-slim"
 
     steps:
       - name: "Checkout"
