@@ -1,0 +1,14 @@
+local/Dockerfile
+  h_173dc5fb53901a 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "d8999395a3fb17541926af12582ee0b330a4eb98",
+  "prompts": {},
+  "humans": {
+    "h_173dc5fb53901a": {
+      "author": "Marcin Michalski <marcin.michalski@lendable.co.uk>"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.github/workflows/ci.yml
+  h_173dc5fb53901a 13-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "321f1430b0b9b75ea1597da6b4869a3dafe9dabb",
+  "prompts": {},
+  "humans": {
+    "h_173dc5fb53901a": {
+      "author": "Marcin Michalski <marcin.michalski@lendable.co.uk>"
+    }
+  }
+}
