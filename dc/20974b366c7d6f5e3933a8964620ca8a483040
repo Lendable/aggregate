@@ -1,0 +1,14 @@
+.github/workflows/sloth.yaml
+  h_173dc5fb53901a 1-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "dc20974b366c7d6f5e3933a8964620ca8a483040",
+  "prompts": {},
+  "humans": {
+    "h_173dc5fb53901a": {
+      "author": "Marcin Michalski <marcin.michalski@lendable.co.uk>"
+    }
+  }
+}
