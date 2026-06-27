@@ -10,8 +10,8 @@ on:
 
 jobs:
   ci:
-    name: "Execute"
-    runs-on: ${{ matrix.operating-system }}
+    name: "Execute (PHP ${{ matrix.php-version }} with ${{ matrix.dependencies }} deps)"
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
@@ -21,10 +21,8 @@ jobs:
           - "highest"
           - "locked"
         php-version:
-          - "8.3"
           - "8.4"
-        operating-system:
-          - "ubuntu-latest"
+          - "8.5"
 
     steps:
       - name: "Checkout"
@@ -37,7 +35,7 @@ jobs:
           ini-values: memory_limit=-1
 
       - name: "Update Composer platform version"
-        if: ${{ matrix.dependencies != 'locked' && matrix.php-version != '8.3' }}
+        if: ${{ matrix.dependencies != 'locked' && matrix.php-version != '8.4' }}
         shell: bash
         run: "composer config platform.php ${{ matrix.php-version }}"
 
@@ -62,7 +60,7 @@ jobs:
         run: "composer security:check"
 
       - name: "Run coding style"
-        if: ${{ matrix.dependencies == 'locked' && matrix.php-version == '8.3' }}
+        if: ${{ matrix.dependencies == 'locked' && matrix.php-version == '8.4' }}
         run: "composer code-style:check"
 
       - name: "Run PHPStan"

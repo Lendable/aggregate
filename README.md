@@ -19,7 +19,7 @@ composer require lendable/aggregate
 
 ## Requirements
 
-* PHP >= 8.3
+* PHP >= 8.4
 
 ## Functionality
 
