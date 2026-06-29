@@ -23,8 +23,7 @@ final class AggregateTypeTest extends TestCase
     #[Test]
     public function throws_if_constructed_with_an_empty_string(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Aggregate type cannot be empty.');
+        $this->expectExceptionObject(new \InvalidArgumentException('Aggregate type cannot be empty.'));
 
         AggregateType::fromString('');
     }

@@ -4,29 +4,20 @@ declare(strict_types=1);
 
 use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
 use Rector\Config\RectorConfig;
-use Rector\PHPUnit\Set\PHPUnitSetList;
-use Rector\Set\ValueObject\LevelSetList;
-use Rector\Set\ValueObject\SetList;
 use Rector\ValueObject\PhpVersion;
 
-return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->parallel();
-    $rectorConfig->paths([
+return RectorConfig::configure()
+    ->withParallel()
+    ->withPaths([
         __DIR__.'/src',
         __DIR__.'/tests',
-    ]);
-    $rectorConfig->phpVersion(PhpVersion::PHP_83);
-    $rectorConfig->phpstanConfig(__DIR__.'/phpstan-rector.neon');
-    $rectorConfig->importNames();
-    $rectorConfig->importShortClasses(false);
-
-    $rectorConfig->skip([
+    ])
+    ->withPhpVersion(PhpVersion::PHP_84)
+    ->withPHPStanConfigs([__DIR__.'/phpstan-rector.neon'])
+    ->withImportNames(importShortClasses: false)
+    ->withComposerBased(phpunit: true)
+    ->withPhpSets(php84: true)
+    ->withPreparedSets(codeQuality: true)
+    ->withSkip([
         FlipTypeControlToUseExclusiveTypeRector::class,
     ]);
-
-    $rectorConfig->sets([
-        SetList::CODE_QUALITY,
-        LevelSetList::UP_TO_PHP_83,
-        PHPUnitSetList::PHPUNIT_120,
-    ]);
-};
