@@ -15,16 +15,16 @@
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.52.0",
-    "lendable/composer-license-checker": "^1.2.1",
+    "lendable/composer-license-checker": "^1.4.0",
     "php-cs-fixer/shim": "^3.95.11",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
-    "phpstan/phpstan": "^2.1.50",
+    "phpstan/phpstan": "^2.2.2",
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
     "phpstan/phpstan-phpunit": "^2.0.16",
-    "phpstan/phpstan-strict-rules": "^2.0.10",
+    "phpstan/phpstan-strict-rules": "^2.0.11",
     "phpunit/phpunit": "^13.2.1",
-    "qossmic/deptrac": "^2.0.1",
-    "rector/rector": "^2.4.2"
+    "qossmic/deptrac": "^2.0.4",
+    "rector/rector": "^2.5.1"
   },
   "autoload": {
     "psr-4": {
