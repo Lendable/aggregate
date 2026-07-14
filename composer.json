@@ -16,7 +16,7 @@
   "require-dev": {
     "ergebnis/composer-normalize": "^2.52.0",
     "lendable/composer-license-checker": "^1.4.0",
-    "php-cs-fixer/shim": "^3.95.11",
+    "php-cs-fixer/shim": "^3.95.12",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
     "phpstan/phpstan": "^2.2.5",
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
