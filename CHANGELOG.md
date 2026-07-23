@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Lendable/aggregate/compare/1.2.1...1.3.0) (2026-07-23)
+
+
+### Features
+
+* Require PHP 8.4 ([#911](https://github.com/Lendable/aggregate/issues/911)) ([7266f7e](https://github.com/Lendable/aggregate/commit/7266f7e74adb210f9035404173ef462fae64831a))
+
 ## [1.2.1](https://github.com/Lendable/aggregate/compare/1.2.0...1.2.1) (2026-04-27)
 
 
