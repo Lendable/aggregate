@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
+use Rector\CodeQuality\Rector\If_\ExplicitNullableObjectInstanceRector;
 use Rector\Config\RectorConfig;
 use Rector\ValueObject\PhpVersion;
 
@@ -19,5 +19,5 @@ return RectorConfig::configure()
     ->withPhpSets(php84: true)
     ->withPreparedSets(codeQuality: true)
     ->withSkip([
-        FlipTypeControlToUseExclusiveTypeRector::class,
+        ExplicitNullableObjectInstanceRector::class,
     ]);
