@@ -1,0 +1,19 @@
+rector.php
+  s_2c35d78832361d::t_b898183dad4c02 5,22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f9379d28d336a444f4ea925684302b5c49280032",
+  "prompts": {},
+  "sessions": {
+    "s_2c35d78832361d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f139a512-a532-4bd1-802f-3fbf943ad264",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Marcin Michalski <evulmastah@gmail.com>"
+    }
+  }
+}

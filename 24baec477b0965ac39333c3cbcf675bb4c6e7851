@@ -1,0 +1,16 @@
+composer.json
+  h_2bcd98c360af81 21
+composer.lock
+  h_2bcd98c360af81 7,1301,1304-1305,1361
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "24baec477b0965ac39333c3cbcf675bb4c6e7851",
+  "prompts": {},
+  "humans": {
+    "h_2bcd98c360af81": {
+      "author": "Marcin Michalski <evulmastah@gmail.com>"
+    }
+  }
+}
