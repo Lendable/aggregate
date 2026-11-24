@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6cfe10fddc4c7b75e47b26c5277449c",
+    "content-hash": "03b9e59bb9d53c8648953ec5fc006356",
     "packages": [
         {
             "name": "brick/math",
@@ -1213,16 +1213,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.95.32",
+            "version": "v3.95.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "c95a290fc4486d4a68fb75f88d7b166f4141686a"
+                "reference": "ecc5bd6c3a8151488dc6b9a81502655726bd0f1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/c95a290fc4486d4a68fb75f88d7b166f4141686a",
-                "reference": "c95a290fc4486d4a68fb75f88d7b166f4141686a",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/ecc5bd6c3a8151488dc6b9a81502655726bd0f1b",
+                "reference": "ecc5bd6c3a8151488dc6b9a81502655726bd0f1b",
                 "shasum": ""
             },
             "require": {
@@ -1259,7 +1259,7 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.95.32"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.95.31"
             },
             "funding": [
                 {
@@ -1267,8 +1267,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-17T18:09:48+00:00",
-            "published-time": "2026-11-17T18:09:58+00:00"
+            "time": "2026-11-16T21:05:48+00:00",
+            "published-time": "2026-11-16T21:05:58+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
